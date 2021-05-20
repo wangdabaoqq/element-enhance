@@ -1,9 +1,9 @@
 import type { App } from 'vue'
-import ProRadioButton from './RadioButton.vue'
+import EleRadioButton from './RadioButton.vue'
 import type { IDefineComponent, IRadioButtonProps } from '../types/index'
 
-ProRadioButton.install = (app: App) => {
-  app.component(ProRadioButton.name || 'ProRadioButton', ProRadioButton)
+EleRadioButton.install = (app: App) => {
+  app.component(EleRadioButton.name || 'ProRadioButton', EleRadioButton)
 }
 
-export default ProRadioButton as IDefineComponent<IRadioButtonProps>
+export default EleRadioButton as IDefineComponent<IRadioButtonProps>

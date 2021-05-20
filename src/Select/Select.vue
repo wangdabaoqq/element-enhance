@@ -1,7 +1,7 @@
 <template>
   <el-select
     :model-value="modelValue"
-    class="pro-select"
+    class="ele-select"
     @change="upData"
   >
     <el-option

@@ -1,9 +1,9 @@
 import type { App } from 'vue'
-import ProCheckbox from './Checkbox.vue'
+import EleCheckbox from './Checkbox.vue'
 import type { IDefineComponent, ICheckboxProps } from '../types/index'
 
-ProCheckbox.install = (app: App) => {
-  app.component(ProCheckbox.name || 'ProCheckbox', ProCheckbox)
+EleCheckbox.install = (app: App) => {
+  app.component(EleCheckbox.name || 'EleCheckbox', EleCheckbox)
 }
 
-export default ProCheckbox as IDefineComponent<ICheckboxProps>
+export default EleCheckbox as IDefineComponent<ICheckboxProps>

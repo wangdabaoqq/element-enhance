@@ -62,6 +62,7 @@ import { useAttrs, useShow } from '../composables/index'
 const props = defineProps<{
   collapse?: boolean
   transition?: string
+  theme?: string
 }>()
 const { collapse, transition } = toRefs(props)
 const { slots } = useContext()

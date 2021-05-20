@@ -2,7 +2,7 @@
   <el-dropdown
     :placement="placement"
     :trigger="trigger"
-    class="pro-column-setting"
+    class="ele-column-setting"
   >
     <el-button
       :size="size"
@@ -42,7 +42,7 @@
   </el-dropdown>
 </template>
 
-<script setup name="ProColumnSetting" lang="ts">
+<script setup name="EleColumnSetting" lang="ts">
 import { toRefs, defineEmit, defineProps, computed } from 'vue'
 import { ElDropdown, ElDropdownMenu, ElButton, ElTree } from 'element-plus'
 import { filterFlat } from '../utils/index'

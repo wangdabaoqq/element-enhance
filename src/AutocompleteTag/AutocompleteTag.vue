@@ -1,5 +1,5 @@
 <template>
-  <div class="pro-autocomplete-tag pro-input-tag">
+  <div class="ele-autocomplete-tag pro-input-tag">
     <el-tag
       v-for="(item, index) in list"
       :key="index"
@@ -46,7 +46,7 @@ const { input, list, add, close, keyup } = useInputTag(props, emit)
 </script>
 
 <style lang="postcss">
-.pro-input-tag {
+.ele-input-tag {
   display: flex;
   flex-wrap: wrap;
   align-items: center;

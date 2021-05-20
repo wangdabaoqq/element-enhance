@@ -1,7 +1,7 @@
 <template>
   <el-radio-group
     :model-value="modelValue"
-    class="pro-radio"
+    class="ele-radio"
     @change="upData"
   >
     <el-radio

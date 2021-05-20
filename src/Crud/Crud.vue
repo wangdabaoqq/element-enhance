@@ -1,6 +1,6 @@
 <template>
-  <section class="pro-crud">
-    <pro-form
+  <section class="ele-crud">
+    <ele-form
       v-if="searchColumns && searchColumns.length"
       :model-value="search"
       :columns="searchColumns"
@@ -52,7 +52,7 @@
       <template #menu-right>
         <slot name="search-menu-right" />
       </template>
-    </pro-form>
+    </ele-form>
     <div class="pro-crud-menu">
       <div class="pro-menu-item">
         <slot
@@ -76,7 +76,7 @@
         <slot name="action" />
       </div>
     </div>
-    <pro-table
+    <ele-table
       v-bind="attrs"
       ref="table"
       :columns="tableColumns"
@@ -135,19 +135,19 @@
           name="menu"
         />
       </template>
-    </pro-table>
+    </ele-table>
     <el-dialog
       v-if="formColumns && formColumns.length"
       v-model="dialogVisible"
       v-bind="bindDialog"
     >
-      <pro-form
+      <ele-form
         v-bind="attrs"
         ref="form"
         :model-value="modelValue"
         :columns="formColumns"
         :menu="menuColumns"
-        class="pro-crud-form"
+        class="ele-crud-form"
         @update:modelValue="upFormData"
         @submit="submitForm"
         @reset="resetForm"
@@ -191,7 +191,7 @@
         <template #menu-right>
           <slot name="form-menu-right" />
         </template>
-      </pro-form>
+      </ele-form>
     </el-dialog>
   </section>
 </template>
@@ -209,8 +209,8 @@ import {
   useFormMethods,
   useFormSlotList,
 } from '../composables/index'
-import ProForm from '../Form/index'
-import ProTable from '../Table/index'
+import EleForm from '../Form/index'
+import EleTable from '../Table/index'
 import type {
   CrudColumn,
   FormColumn,
@@ -310,11 +310,11 @@ expose({
 </script>
 
 <style lang="postcss">
-.pro-crud-menu {
+.ele-crud-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  & + .pro-table {
+  & + .ele-table {
     margin-top: 15px;
   }
 }

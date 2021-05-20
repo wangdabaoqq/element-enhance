@@ -1,9 +1,9 @@
 import type { App } from 'vue'
-import ProInputTag from './InputTag.vue'
+import EleInputTag from './InputTag.vue'
 import type { IDefineComponent, IInputTagProps } from '../types/index'
 
-ProInputTag.install = (app: App) => {
-  app.component(ProInputTag.name || 'ProInputTag', ProInputTag)
+EleInputTag.install = (app: App) => {
+  app.component(EleInputTag.name || 'EleInputTag', EleInputTag)
 }
 
-export default ProInputTag as IDefineComponent<IInputTagProps>
+export default EleInputTag as IDefineComponent<IInputTagProps>

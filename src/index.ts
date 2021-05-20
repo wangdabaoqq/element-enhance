@@ -7,37 +7,37 @@ import type { IDefineComponent, InstallOptions } from './types/index'
 import { objectDeepMerge } from './utils/index'
 import { config } from './utils/config'
 
-import ProAutocompleteTag from './AutocompleteTag/index'
+import EleAutocompleteTag from './AutocompleteTag/index'
 import EleBreadcrumb from './Breadcrumb/index'
-import ProCheckbox from './Checkbox/index'
-import ProCheckboxButton from './CheckboxButton/index'
-import ProColumnSetting from './ColumnSetting/index'
-import ProCrud from './Crud/index'
-import ProForm from './Form/index'
-import ProInputTag from './InputTag/index'
+import EleCheckbox from './Checkbox/index'
+import EleCheckboxButton from './CheckboxButton/index'
+import EleColumnSetting from './ColumnSetting/index'
+import EleCrud from './Crud/index'
+import EleForm from './Form/index'
+import EleInputTag from './InputTag/index'
 import EleLayout from './Layout/index'
 import EleMenu from './Menu/index'
-import ProRadio from './Radio/index'
-import ProRadioButton from './RadioButton/index'
-import ProSelect from './Select/index'
-import ProTable from './Table/index'
+import EleRadio from './Radio/index'
+import EleRadioButton from './RadioButton/index'
+import EleSelect from './Select/index'
+import EleTable from './Table/index'
 import EleTabs from './Tabs/index'
 
 const components: Record<string, IDefineComponent> = {
-  ProAutocompleteTag,
+  EleAutocompleteTag,
   EleBreadcrumb,
-  ProCheckbox,
-  ProCheckboxButton,
-  ProColumnSetting,
-  ProCrud,
-  ProForm,
-  ProInputTag,
+  EleCheckbox,
+  EleCheckboxButton,
+  EleColumnSetting,
+  EleCrud,
+  EleForm,
+  EleInputTag,
   EleLayout,
   EleMenu,
-  ProRadio,
-  ProRadioButton,
-  ProSelect,
-  ProTable,
+  EleRadio,
+  EleRadioButton,
+  EleSelect,
+  EleTable,
   EleTabs,
 }
 
@@ -55,20 +55,20 @@ const install = (app: App, options?: InstallOptions): void => {
 }
 
 export {
-  ProAutocompleteTag,
+  EleAutocompleteTag,
   EleBreadcrumb,
-  ProCheckbox,
-  ProCheckboxButton,
-  ProColumnSetting,
-  ProCrud,
-  ProForm,
-  ProInputTag,
+  EleCheckbox,
+  EleCheckboxButton,
+  EleColumnSetting,
+  EleCrud,
+  EleForm,
+  EleInputTag,
   EleLayout,
   EleMenu,
-  ProRadio,
-  ProRadioButton,
-  ProSelect,
-  ProTable,
+  EleRadio,
+  EleRadioButton,
+  EleSelect,
+  EleTable,
   EleTabs,
   install,
 }
