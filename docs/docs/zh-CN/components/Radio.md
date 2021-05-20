@@ -6,10 +6,10 @@
 
 ### 基础用法
 
-::: demo 使用 `pro-radio`，并传入 data 数据，自动生成选项
+::: demo 使用 `ele-radio`，并传入 data 数据，自动生成选项
 
 <template>
-  <pro-radio
+  <ele-radio
     v-model="radio"
     :data="data"
   />
@@ -44,7 +44,7 @@ export default {
 ::: demo 将传入 data 数据中的某项设置为 `disabled: true` 即可
 
 <template>
-  <pro-radio
+  <ele-radio
     v-model="radio1"
     :data="list"
   />
@@ -79,7 +79,7 @@ export default {
 ::: demo 通过 config 配置数据键值。`value`- v-model 绑定的键值、`label`-显示键值、`disabled`-控制不可选的键值、`name`-原生 name 的键值
 
 <template>
-  <pro-radio
+  <ele-radio
     v-model="radio2"
     :data="data"
     :config="config"
@@ -114,10 +114,10 @@ export default {
 
 ### 按钮样式
 
-::: demo 使用 `pro-radio-button` 显示按钮样式的多选框组
+::: demo 使用 `ele-radio-button` 显示按钮样式的多选框组
 
 <template>
-  <pro-radio-button
+  <ele-radio-button
     v-model="radiobutton"
     :data="data"
   />

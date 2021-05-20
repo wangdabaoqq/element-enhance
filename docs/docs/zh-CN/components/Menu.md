@@ -13,7 +13,7 @@
 ::: demo 通过传入 `mode` 实现自定义菜单模式
 
 <template>
-  <pro-radio-button
+  <ele-radio-button
     v-model="mode"
     :data="data"
   />

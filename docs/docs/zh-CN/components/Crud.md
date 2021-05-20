@@ -9,7 +9,7 @@
 ::: demo 传入 columns 数据，根据 `add` `edit` `form` `hide` `search` 自动生成多功能表格
 
 <template>
-  <pro-crud
+  <ele-crud
     v-model="form"
     v-model:search="serachForm"
     :columns="columns"
@@ -113,7 +113,7 @@ export default {
 ::: demo 默认不显示新增、编辑、删除按钮，需要通过 `menu` 传入 `true` 或者 menu 的相关配置才会显示
 
 <template>
-  <pro-crud
+  <ele-crud
     v-model="form1"
     v-model:search="serachForm1"
     :columns="columns1"
@@ -237,7 +237,7 @@ export default {
 ::: demo 通过 `form-columns` 传入的配置直接作用于搜索表单，类型同 Form columns
 
 <template>
-  <pro-crud
+  <ele-crud
     v-model:search="serachForm2"
     :columns="columns2"
     :search-columns="searchColumns"
@@ -313,7 +313,7 @@ export default {
 ::: demo 通过 `add-columns` 传入的配置直接作用于新增表单，类型同 Form columns
 
 <template>
-  <pro-crud
+  <ele-crud
     v-model="form3"
     :columns="columns2"
     :add-columns="addColumns"
@@ -392,7 +392,7 @@ export default {
 ::: demo 通过 `edit-columns` 传入的配置直接作用于新增表单，类型同 Form columns
 
 <template>
-  <pro-crud
+  <ele-crud
     v-model="form4"
     :columns="columns4"
     :edit-columns="editColumns"
@@ -503,7 +503,7 @@ export default {
 ::: demo 通过 `form-columns` 传入的配置直接作用于新增和编辑表单，类型同 Form columns
 
 <template>
-  <pro-crud
+  <ele-crud
     v-model="form5"
     :columns="columns2"
     :form-columns="formColumns"
@@ -612,7 +612,7 @@ export default {
 ::: demo 通过 `table-columns` 传入的配置直接作用于表格，类型同 Table columns
 
 <template>
-  <pro-crud
+  <ele-crud
     v-model="form6"
     v-model:search="serachForm6"
     :columns="columns6"
@@ -731,7 +731,7 @@ export default {
 ::: demo 通过 `before-open` `before-close` 指定弹窗开启前与弹窗关闭前执行的操作
 
 <template>
-  <pro-crud
+  <ele-crud
     v-model="form7"
     :columns="columns7"
     :menu="{ label: '操作' }"
@@ -818,7 +818,7 @@ export default {
 ::: demo 通过 columns 的 slot 配置是否开启自定义插槽功能。开启后可以使用带 `[prop]` 相关的插槽，否则只有不带 `[prop]` 的插槽生效
 
 <template>
-  <pro-crud
+  <ele-crud
     v-model="form8"
     v-model:search="serachForm8"
     :columns="columns"
@@ -856,7 +856,7 @@ export default {
     <template #name-header="{ column }">
       <s>{{ column.label }}</s>
     </template>
-  </pro-crud>
+  </ele-crud>
 </template>
 
 <script>

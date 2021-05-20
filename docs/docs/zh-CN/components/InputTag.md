@@ -6,10 +6,10 @@
 
 ### 基础用法
 
-::: demo 使用 `pro-input-tag` 支持 type="text" 的大部分配置
+::: demo 使用 `ele-input-tag` 支持 type="text" 的大部分配置
 
 <template>
-  <pro-input-tag
+  <ele-input-tag
     v-model="inputTags"
     placeholder="请输入内容后点击空格按键"
   />
@@ -36,7 +36,7 @@ export default {
 ::: demo 指定 trigger 为 enter 时，将通过回车键触发输入
 
 <template>
-  <pro-input-tag
+  <ele-input-tag
     v-model="inputTags1"
     trigger="enter"
     placeholder="请输入内容后点击回车按键"
@@ -64,7 +64,7 @@ export default {
 ::: demo 可通过 size 属性指定输入框和标签的尺寸
 
 <template>
-  <pro-input-tag
+  <ele-input-tag
     v-for="item in sizeList"
     v-model="inputTags2"
     :key="item"
@@ -103,10 +103,10 @@ export default {
 
 ### 带输入建议
 
-::: demo 使用 `pro-autocomplete-tag` 支持 autocomplete 的大部分配置
+::: demo 使用 `ele-autocomplete-tag` 支持 autocomplete 的大部分配置
 
 <template>
-  <pro-autocomplete-tag
+  <ele-autocomplete-tag
     v-model="autocompleteTags"
     :fetch-suggestions="querySearch"
     placeholder="请输入内容后点击空格按键"
