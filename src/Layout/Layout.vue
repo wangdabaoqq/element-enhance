@@ -3,6 +3,8 @@
     <ele-layout-aside
       v-bind="attrs"
       :collapse="show"
+      :unique-opened="uniqueOpened"
+      :theme="theme"
       @toggle-collapse="toggleShow"
     >
       <template
@@ -25,7 +27,10 @@
       </template>
     </ele-layout-aside>
     <section class="ele-container">
-      <ele-layout-header @toggle-collapse="toggleShow">
+      <ele-layout-header
+        :breadcrumb="breadcrumb"
+        @toggle-collapse="toggleShow"
+      >
         <template #left>
           <slot name="left-header" />
           <slot name="header-left" />
@@ -35,8 +40,7 @@
           <slot name="header-right" />
         </template>
       </ele-layout-header>
-      <slot name="bottom-header" />
-      <slot name="header-bottom" />
+      <ele-layout-tabs v-if="multiTab" />
       <ele-layout-main :transition="transition">
         <template #top>
           <slot name="main-top" />
@@ -57,16 +61,24 @@ import { defineProps, toRefs, useContext } from 'vue'
 import EleLayoutAside from './LayoutAside.vue'
 import EleLayoutHeader from './LayoutHeader.vue'
 import EleLayoutMain from './LayoutMain.vue'
+import EleLayoutTabs from './LayoutTabs.vue'
 import { useAttrs, useShow } from '../composables/index'
 
 const props = defineProps<{
   collapse?: boolean
   transition?: string
   theme?: string
+  multiTab?: boolean
+  uniqueOpened?: boolean
+  breadcrumb?: boolean
 }>()
-const { collapse, transition } = toRefs(props)
-const { slots } = useContext()
+
+const { collapse, transition, multiTab, uniqueOpened, breadcrumb } = toRefs(
+  props
+)
+
 const attrs = useAttrs()
+const { slots } = useContext()
 const { show, toggleShow } = useShow(collapse?.value)
 </script>
 

@@ -4,7 +4,7 @@
     :prop="prop"
     :style="!inline ? colStyle : undefined"
     :class="!inline && colClass"
-    class="pro-form-item"
+    class="ele-form-item"
   >
     <template
       v-if="item.slot"

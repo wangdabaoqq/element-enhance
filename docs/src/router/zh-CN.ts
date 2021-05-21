@@ -10,18 +10,13 @@ const zhCN: IRouteRecordRaw[] = [
     children: [
       {
         path: '/zh-CN/guide/introduction',
-        component: () => import('../../docs/zh-CN/guide/introduction.md'),
+        component: () => import('../../docs/zh-CN/guide/home.md'),
         meta: { title: '介绍' },
       },
       {
         path: '/zh-CN/guide/',
         component: () => import('../../docs/zh-CN/guide/index.md'),
-        meta: { title: '快速上手' },
-      },
-      {
-        path: '/zh-CN/guide/theme',
-        component: () => import('../../docs/zh-CN/guide/theme.md'),
-        meta: { title: '自定义主题' },
+        meta: { title: '安装' },
       },
     ],
   },
@@ -42,16 +37,6 @@ const zhCN: IRouteRecordRaw[] = [
         meta: { title: '菜单' },
       },
       {
-        path: '/zh-CN/components/breadcrumb',
-        component: () => import('../../docs/zh-CN/components/Breadcrumb.md'),
-        meta: { title: '面包屑' },
-      },
-      {
-        path: '/zh-CN/components/tabs',
-        component: () => import('../../docs/zh-CN/components/Tabs.md'),
-        meta: { title: '选项卡' },
-      },
-      {
         path: '/zh-CN/components/form',
         component: () => import('../../docs/zh-CN/components/Form.md'),
         meta: { title: '表单' },
@@ -69,7 +54,7 @@ const zhCN: IRouteRecordRaw[] = [
       {
         path: '/zh-CN/components/select',
         component: () => import('../../docs/zh-CN/components/Select.md'),
-        meta: { title: '下拉选择' },
+        meta: { title: '下拉' },
       },
       {
         path: '/zh-CN/components/input-tag',

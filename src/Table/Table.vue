@@ -2,7 +2,7 @@
   <el-table
     ref="table"
     v-bind="attrs"
-    class="pro-table"
+    class="ele-table"
   >
     <el-table-column
       v-if="selection"
@@ -26,7 +26,7 @@
       v-bind="bindIndex"
       type="index"
     />
-    <pro-table-item
+    <ele-table-item
       v-for="item in columns"
       :key="item.prop"
       :item="item"
@@ -56,7 +56,7 @@
           {{ scope.row[slot.prop] }}
         </slot>
       </template>
-    </pro-table-item>
+    </ele-table-item>
     <slot />
     <template #append>
       <slot name="append" />
@@ -81,7 +81,7 @@
     :current-page="currentPage"
     :page-size="pageSize"
     :total="total"
-    class="pro-pagination"
+    class="ele-pagination"
     @size-change="sizeChange"
     @current-change="currentChange"
     @prev-click="prevClick"
@@ -100,7 +100,7 @@ import {
   useTableMethods,
   usePagination,
 } from '../composables'
-import ProTableItem from './TableItem.vue'
+import EleTableItem from './TableItem.vue'
 import type {
   TableColumn,
   ITableSelectionColumns,
@@ -181,7 +181,7 @@ expose({
 </script>
 
 <style lang="postcss">
-.pro-table + .pro-pagination {
+.ele-table + .ele-pagination {
   padding: 15px 0;
   text-align: right;
 }

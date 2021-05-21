@@ -73,7 +73,7 @@ function handleScroll() {
 <style>
 .ele-code {
   margin: 1rem 0;
-  border: 1px solid var(--c-divider);
+  border: 1px solid whitesmoke;
   border-radius: 3px;
   background: var(--c-bg);
   transition: all 0.2s;
@@ -120,7 +120,7 @@ function handleScroll() {
 .ele-code .control {
   height: 44px;
   box-sizing: border-box;
-  border-top: 1px solid var(--c-divider);
+  border-top: 1px solid whitesmoke;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   background: var(--c-bg);

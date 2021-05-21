@@ -1,7 +1,7 @@
 <template>
   <el-checkbox-group
     :model-value="modelValue || []"
-    class="pro-checkbox"
+    class="ele-checkbox"
     @change="upData"
   >
     <el-checkbox

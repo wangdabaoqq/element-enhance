@@ -7,9 +7,9 @@
     :inline="inline"
     :style="!inline ? rowStyle : undefined"
     :class="!inline && rowClass"
-    class="pro-form"
+    class="ele-form"
   >
-    <pro-form-item
+    <ele-form-item
       v-for="item in columns"
       :key="item.prop"
       :model-value="modelValue"
@@ -48,9 +48,9 @@
           :name="slot.prop"
         />
       </template>
-    </pro-form-item>
+    </ele-form-item>
     <slot />
-    <el-form-item class="pro-form-menu">
+    <el-form-item class="ele-form-menu">
       <slot name="menu-left" />
       <el-button
         v-if="menu.submit"
@@ -76,7 +76,7 @@
 <script setup lang="ts">
 import { defineProps, toRefs, useContext, defineEmit, computed, ref } from 'vue'
 import { ElForm, ElFormItem, ElButton } from 'element-plus'
-import ProFormItem from './FormItem.vue'
+import EleFormItem from './FormItem.vue'
 import {
   useFormSlotList,
   useFormMethods,

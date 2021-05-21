@@ -25,7 +25,6 @@
     </template>
   </el-submenu>
 </template>
-
 <script setup lang="ts">
 import { defineProps, toRefs } from 'vue'
 import { ElMenuItem, ElSubmenu } from 'element-plus'

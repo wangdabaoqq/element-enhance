@@ -9,7 +9,43 @@
 <style>
 .demo-layout {
   border: 1px solid whitesmoke;
-  height: 400px;
+  height: 460px;
+}
+</style>
+
+:::
+
+#### 主题
+
+::: demo 组件默认将从 `vue-router` 中获取路由生成路由，[格式参考](#参考)
+
+<template>
+  <ele-layout theme="black" class="demo-layout" />
+</template>
+
+<style>
+.demo-layout {
+  border: 1px solid whitesmoke;
+  height: 460px;
+}
+</style>
+
+:::
+
+#### 更多
+
+::: demo 组件默认将从 `vue-router` 中获取路由生成路由，[格式参考](#参考)
+
+<template>
+  <ele-layout class="demo-layout" multi-tab="true" breadcrumb="true">
+    <template #logo></template>
+  </ele-layout>
+</template>
+
+<style>
+.demo-layout {
+  border: 1px solid whitesmoke;
+  height: 460px;
 }
 </style>
 
@@ -17,12 +53,12 @@
 
 #### 插槽
 
-::: demo 通过插槽实现更复杂的界面
+::: demo 通过插槽实现更高级的页面
 
 <template>
-  <ele-layout class="docs-layout">
+  <ele-layout class="demo-layout">
     <template #logo="{ collapse }">
-      <span style="line-height: 54px">{{ collapse ? 'Logo' : 'Logo' }}</span>
+      <span style="line-height: 54px">{{ collapse ? '图标' : '图标' }}</span>
     </template>
     <template #header-left>
       <span>左侧</span>
@@ -33,14 +69,21 @@
   </ele-layout>
 </template>
 
+<style>
+.demo-layout {
+  border: 1px solid whitesmoke;
+  height: 460px;
+}
+</style>
+
 :::
 
-#### 自定义路由
+#### 路由
 
 ::: demo 通过传入 `routes` 实现自定义路由显示
 
 <template>
-  <ele-layout :routes="routes" class="docs-layout" />
+  <ele-layout :routes="routes" class="demo-layout" />
 </template>
 
 <script>
@@ -62,6 +105,13 @@ export default {
 }
 </script>
 
+<style>
+.demo-layout {
+  border: 1px solid whitesmoke;
+  height: 460px;
+}
+</style>
+
 :::
 
 #### 配置
@@ -76,20 +126,17 @@ export default {
 
 #### 插槽
 
-| name          | 说明                                                         |
-| :------------ | :----------------------------------------------------------- |
-| logo          | 自定义 Logo，参数为 { collapse } collapse-当前菜单栏是否折叠 |
-| menu          | 控制菜单显示内容，参数为 { meta, path, redirect } 等         |
-| footer        | 页脚内容                                                     |
-| header-left   | 头部左侧内容                                                 |
-| header-right  | 头部右侧内容                                                 |
-| header-bottom | 头部下面内容                                                 |
-| main-top      | 主体顶部内容                                                 |
-| main-bottom   | 主体底部内容                                                 |
+| name         | 说明                                                         |
+| :----------- | :----------------------------------------------------------- |
+| logo         | 自定义 Logo，参数为 { collapse } collapse-当前菜单栏是否折叠 |
+| menu         | 控制菜单显示内容，参数为 { meta, path, redirect } 等         |
+| footer       | 页脚内容                                                     |
+| header-left  | 头部左侧内容                                                 |
+| header-right | 头部右侧内容                                                 |
+| main-top     | 主体顶部内容                                                 |
+| main-bottom  | 主体底部内容                                                 |
 
-### 参考
-
-#### 参考 meta
+#### 参考
 
 ```ts
 interface IRouteMeta extends RouteMeta {
@@ -99,11 +146,3 @@ interface IRouteMeta extends RouteMeta {
   keepAlive?: boolean // 控制 keepAlive
 }
 ```
-
-#### 参考路由
-
-<<< @/docs/src/router/dev.ts
-
-#### 样式配置
-
-[参考](../guide/theme#提供配置的参数)

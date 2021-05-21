@@ -32,10 +32,10 @@ const { transition } = toRefs(props)
 
 <style lang="postcss">
 .ele-main {
+  border-radius: 4px;
   margin: var(--main-margin);
   padding: var(--main-padding);
-  border: 1px solid var(--c-border);
-  border-radius: var(--border-radius);
+  border: 1px solid whitesmoke;
   background: var(--c-aside-background);
   &.el-scrollbar .el-scrollbar__wrap {
     margin-bottom: 0 !important;

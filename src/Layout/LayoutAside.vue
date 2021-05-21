@@ -1,16 +1,30 @@
 <template>
   <aside
-    :class="collapse && 'aside-collapse'"
     class="ele-aside"
+    :class="[
+      theme == 'black' ? 'ele-aside-black' : 'ele-aside-white',
+      collapse && 'aside-collapse',
+    ]"
   >
     <div
       class="mask"
       @click="toggleCollapse"
     />
-    <div class="ele-aside-wrapper">
+    <!-- 根据 theme 生效背景色 -->
+    <div
+      class="ele-aside-wrapper"
+      :class="[
+        theme == 'black'
+          ? 'ele-aside-wrapper-black'
+          : 'ele-aside-wrapper-white',
+      ]"
+    >
       <div
         v-if="slots.logo"
         class="ele-aside-logo"
+        :class="[
+          theme == 'black' ? 'ele-aside-logo-black' : 'ele-aside-logo-white',
+        ]"
       >
         <slot
           :collapse="menuCollapse"
@@ -21,6 +35,8 @@
         <ele-menu
           v-bind="attrs"
           :collapse="menuCollapse"
+          :unique-opened="uniqueOpened"
+          :theme="theme"
         >
           <template
             v-if="slots.menu"
@@ -41,11 +57,15 @@
 import { toRefs, defineEmit, defineProps, useContext, computed } from 'vue'
 import { ElScrollbar } from 'element-plus'
 import { useAttrs, useScreenSize } from '../composables/index'
-import ProMenu from '../Menu/index'
+import EleMenu from '../Menu/index'
 import type { IRouteRecordRaw } from '../types/index'
 
-const props = defineProps<{ collapse: boolean }>()
-const { collapse } = toRefs(props)
+const props = defineProps<{
+  collapse: boolean
+  theme: string
+  uniqueOpened: boolean
+}>()
+const { collapse, theme, uniqueOpened } = toRefs(props)
 const emit = defineEmit(['toggle-collapse'])
 const { slots } = useContext()
 const attrs = useAttrs()
@@ -53,14 +73,33 @@ const size = useScreenSize()
 const menuCollapse = computed(() => {
   return size.value === 'xs' ? false : collapse.value
 })
-
 function toggleCollapse() {
   emit('toggle-collapse')
 }
 </script>
 
 <style lang="postcss">
+.ele-aside-wrapper-black {
+  background-color: #191a23 !important;
+}
+.ele-aside-wrapper-white {
+  background-color: #ffffff !important;
+}
+.ele-aside-black {
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35) !important;
+}
+.ele-aside-white {
+  box-shadow: 2px 0 6px 0 rgba(29, 35, 41, 0.05) !important;
+}
+.ele-aside-logo-black {
+  background-color: #191a23 !important;
+}
+.ele-aside-logo-white {
+  background-color: #ffffff !important;
+}
+
 .ele-aside {
+  z-index: 999;
   & .mask {
     display: none;
   }
@@ -69,19 +108,17 @@ function toggleCollapse() {
     flex-direction: column;
     width: var(--aside-width);
     height: 100%;
-    border-right: 1px solid var(--c-border);
     background: var(--c-aside-background);
     transition: width var(--t-duration) var(--t-timing-function);
     & .ele-aside-logo {
       padding-left: 20px;
       height: var(--header-height);
       min-height: var(--header-height);
-      border-bottom: 1px solid var(--c-border);
-      background: var(--c-aside-background);
       overflow: hidden;
     }
     & .el-scrollbar {
       flex: 1;
+      background-color: transparent;
       & .el-scrollbar__wrap {
         overflow-x: hidden;
       }
