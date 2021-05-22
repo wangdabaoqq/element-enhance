@@ -28,6 +28,7 @@
     </ele-layout-aside>
     <section class="ele-container">
       <ele-layout-header
+        :collapse="show"
         :breadcrumb="breadcrumb"
         @toggle-collapse="toggleShow"
       >

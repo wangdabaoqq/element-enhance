@@ -10,7 +10,6 @@
       class="mask"
       @click="toggleCollapse"
     />
-    <!-- 根据 theme 生效背景色 -->
     <div
       class="ele-aside-wrapper"
       :class="[
@@ -65,6 +64,7 @@ const props = defineProps<{
   theme: string
   uniqueOpened: boolean
 }>()
+
 const { collapse, theme, uniqueOpened } = toRefs(props)
 const emit = defineEmit(['toggle-collapse'])
 const { slots } = useContext()
@@ -86,18 +86,19 @@ function toggleCollapse() {
   background-color: #ffffff !important;
 }
 .ele-aside-black {
-  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35) !important;
+  box-shadow: 2px 0 6px rgb(0 21 41 / 35%) !important;
 }
 .ele-aside-white {
   box-shadow: 2px 0 6px 0 rgba(29, 35, 41, 0.05) !important;
 }
 .ele-aside-logo-black {
+  border-bottom: 1px solid #101117;
   background-color: #191a23 !important;
 }
 .ele-aside-logo-white {
+  border-bottom: 1px solid #f8f8f9;
   background-color: #ffffff !important;
 }
-
 .ele-aside {
   z-index: 999;
   & .mask {

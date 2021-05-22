@@ -1,16 +1,16 @@
 @custom-media --xs-medium (width < 768px);
 
 :root {
-  /* color */
+  /* 布局颜色 */
   --c-background: white;
   --c-header-background: var(--c-background);
   --c-aside-background: var(--c-background);
   --c-tabs-background: var(--c-background);
-  --c-page-background: #f0f2f5;
+  --c-page-background: #f5f7f9;
   --c-mask-background: rgba(0, 0, 0, 0.4);
   --c-border: whitesmoke;
 
-  /* size */
+  /** 布局尺寸 */
   --aside-width: 240px;
   --aside-collapse-width: 60px;
   --layout-height: 100vh;
@@ -21,9 +21,6 @@
   --main-padding: 20px;
   --xs-main-margin: 4px;
   --xs-main-padding: 10px;
-
-  /* z-index */
-  --z-index-sidebar: 100;
 
   /* transition */
   --t-duration: 0.3s;

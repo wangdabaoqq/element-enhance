@@ -68,13 +68,16 @@ function handleSelect(path: string) {
   border-right: 0;
 }
 .ele-menu.black .el-submenu .el-menu {
-  background-color: #191a23 !important;
+  background-color: #000c17 !important;
 }
 .ele-menu.black .el-submenu .el-menu .el-menu-item {
-  background-color: #191a23 !important;
+  background-color: #000c17 !important;
 }
 .ele-menu.black .el-submenu .el-menu .el-menu-item.is-active {
   background-color: #409eff !important;
   color: white !important;
+}
+.ele-menu .el-submenu__icon-arrow {
+  font-weight: 600 !important;
 }
 </style>

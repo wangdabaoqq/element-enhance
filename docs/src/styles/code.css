@@ -20,8 +20,9 @@ code .token.inserted {
 div[class*='language-'] {
   position: relative;
   margin: 1rem -1.5rem;
-  background-color: var(--code-bg-color);
+  background-color: #fafafa;
   overflow-x: auto;
+  border: 1px solid #eaeefb;
 }
 
 li > div[class*='language-'] {
@@ -70,7 +71,8 @@ li > div[class*='language-'] {
   padding: 0;
   line-height: var(--code-line-height);
   font-size: var(--code-font-size);
-  color: #eee;
+  color: #000;
+  background-color: #fafafa;
 }
 
 /* Line highlighting */

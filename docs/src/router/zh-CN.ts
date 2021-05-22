@@ -69,12 +69,12 @@ const zhCN: IRouteRecordRaw[] = [
       {
         path: '/zh-CN/components/crud',
         component: () => import('../../docs/zh-CN/components/Crud.md'),
-        meta: { title: '增删改查' },
+        meta: { title: '增删' },
       },
       {
         path: '/zh-CN/components/ColumnSetting',
         component: () => import('../../docs/zh-CN/components/ColumnSetting.md'),
-        meta: { title: '列配置' },
+        meta: { title: '配置' },
       },
     ],
   },

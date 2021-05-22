@@ -8,7 +8,23 @@
 
 <style>
 .demo-menu {
-  width: 300px;
+  width: 240px;
+}
+</style>
+
+:::
+
+#### 主题
+
+::: demo 组件默认将从 `vue-router` 中获取路由生成路由，[格式参考](./Layout#参考)
+
+<template>
+  <ele-menu class="demo-menu" theme="black"/>
+</template>
+
+<style>
+.demo-menu {
+  width: 240px;
 }
 </style>
 
@@ -19,34 +35,12 @@
 ::: demo 通过传入 `mode` 实现自定义菜单模式
 
 <template>
-  <ele-radio-button
-    v-model="mode"
-    :data="data"
-  />
-  <ele-menu :mode="mode"/>
+  <ele-menu mode="horizontal"/>
 </template>
-
-<script>
-import { ref } from 'vue'
-
-export default {
-  setup() {
-    const mode = ref('horizontal')
-    const data = [
-      { value: 'vertical', label: '垂直' },
-      { value: 'horizontal', label: '水平' },
-    ]
-
-    return {
-      mode,
-    }
-  }
-}
-</script>
 
 <style>
 .demo-menu {
-  width: 300px;
+  width: 240px;
 }
 </style>
 
@@ -81,7 +75,7 @@ export default {
 
 <style>
 .demo-menu {
-  width: 300px;
+  width: 240px;
 }
 </style>
 

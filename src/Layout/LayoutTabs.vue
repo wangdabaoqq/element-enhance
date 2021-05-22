@@ -44,7 +44,7 @@ const route = useRoute()
   line-height: 34px;
   height: 34px;
   border: none;
-  border-radius: 2px;
+  border-radius: 3px;
   padding-left: 16px !important;
   padding-right: 16px !important;
 }
@@ -56,18 +56,33 @@ const route = useRoute()
   border: none;
 }
 .ele-tabs.el-tabs--card > .el-tabs__header .el-tabs__nav-prev {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  width: 34px;
+  height: 34px;
+  margin-top: 6px;
+  line-height: 34px;
   text-align: center;
 }
 .ele-tabs.el-tabs--card > .el-tabs__header .el-tabs__nav-next {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  width: 34px;
+  height: 34px;
+  margin-top: 6px;
+  line-height: 34px;
   text-align: center;
 }
 .ele-tabs.el-tabs--card > .el-tabs__header .el-tabs__nav-wrap.is-scrollable {
-  padding: 0 40px;
+  padding: 0 34px;
+}
+
+.ele-tabs.el-tabs--card
+  > .el-tabs__header
+  .el-tabs__item.is-active.is-closable
+  .el-icon-close:hover {
+  background-color: transparent;
+  color: #303133;
+}
+
+.ele-tabs.el-tabs--card > .el-tabs__header .el-tabs__nav-next i,
+.ele-tabs.el-tabs--card > .el-tabs__header .el-tabs__nav-prev i {
+  font-weight: 600 !important;
 }
 </style>

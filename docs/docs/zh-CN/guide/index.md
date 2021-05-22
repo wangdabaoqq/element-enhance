@@ -1,1 +1,5 @@
-#### 安装
+##### 安装
+
+```
+npm install element-enhance --save
+```

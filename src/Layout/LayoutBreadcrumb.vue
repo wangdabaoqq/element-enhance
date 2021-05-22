@@ -26,3 +26,11 @@ const list = computed(() => {
   return findRouterItemListByPath(routes.value, route.path)
 })
 </script>
+<style>
+.ele-breadcrumb .el-breadcrumb__inner a,
+.ele-breadcrumb .el-breadcrumb__separator {
+  color: #606266 !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+}
+</style>

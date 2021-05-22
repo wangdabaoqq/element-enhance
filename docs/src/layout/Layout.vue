@@ -28,10 +28,10 @@
 import { ref } from '@vue/runtime-core'
 export default {
   setup() {
-    const theme = ref('white')
+    const theme = ref('black')
     const multiTab = ref(true)
-    const breadcrumb = ref(false)
-    const uniqueOpened = ref(false)
+    const breadcrumb = ref(true)
+    const uniqueOpened = ref(true)
 
     return {
       theme,
