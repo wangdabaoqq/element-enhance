@@ -1,18 +1,16 @@
-# element-enhance (Beta)
+# Element - Enhance
 
 > a component library for Vue 3 base on element-plus
 
 [Documentation](https://gitee.com/Jmysy/element-enhance) | [Changelog](./CHANGELOG.md)
 
-## Installation
+## Install
 
 ```sh
-yarn add element-enhance
-# or
 npm i element-enhance
 ```
 
-## Usage
+## Use
 
 ```js
 import { createApp } from 'vue'
@@ -25,6 +23,8 @@ createApp(App).use(ElementEnhance).mount('#app')
 
 ```vue
 <template>
-  <ele-layout />
+  <ele-layout multi-tab="true" breadcrumb="true">
+    <template #logo></template>
+  </ele-layout>
 </template>
 ```

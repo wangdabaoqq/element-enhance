@@ -37,7 +37,10 @@
 ::: demo 组件默认将从 `vue-router` 中获取路由生成路由，[格式参考](#参考)
 
 <template>
-  <ele-layout class="demo-layout" multi-tab="true" breadcrumb="true">
+  <ele-layout 
+    class="demo-layout" 
+    multi-tab="true" 
+    breadcrumb="true">
     <template #logo></template>
   </ele-layout>
 </template>
