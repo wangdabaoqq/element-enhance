@@ -9,7 +9,7 @@
 ::: demo Automatic record routes
 
 <template>
-  <pro-tabs />
+  <ele-tabs />
 </template>
 
 <script>

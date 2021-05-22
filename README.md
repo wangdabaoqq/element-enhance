@@ -2,7 +2,7 @@
 
 > a component library for vue-next base on element-plus
 
-[查看文档](https://gitee.com/Jmysy/element-enhance) | [更新日志](./CHANGELOG.md)
+[DOCUMENT](https://gitee.com/Jmysy/element-enhance) | [CHANGELOG](./CHANGELOG.md)
 
 ### Install
 
@@ -28,3 +28,5 @@ createApp(App).use(ElementEnhance).mount('#app')
   </ele-layout>
 </template>
 ```
+
+### Contribution

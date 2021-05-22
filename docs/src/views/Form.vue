@@ -1,5 +1,5 @@
 <template>
-  <pro-form
+  <ele-form
     v-model="form"
     :columns="columns"
     :menu="menu"
@@ -15,8 +15,8 @@
     <template #slot="{ item, value, setValue }">
       <span>{{ item }} - {{ value }} - {{ setValue }}</span>
     </template>
-  </pro-form>
-  <pro-form
+  </ele-form>
+  <ele-form
     ref="ruleForm"
     v-model="form1"
     :columns="columns1"
@@ -24,12 +24,12 @@
     label-width="180px"
   >
     <template #address="{ value, setValue }">
-      <pro-input-tag
+      <ele-input-tag
         :model-value="value"
         @update:modelValue="setValue"
       />
     </template>
-  </pro-form>
+  </ele-form>
 </template>
 
 <script setup lang="ts">
@@ -89,18 +89,18 @@ const columns = ref<IFormColumns>([
     },
   },
   {
-    label: 'pro-input-tag',
+    label: 'ele-input-tag',
     prop: 'inputTag',
-    component: 'pro-input-tag',
+    component: 'ele-input-tag',
     span: 12,
     props: {
       placeholder: 'Click the space after input',
     },
   },
   {
-    label: 'pro-autocomplete-tag',
+    label: 'ele-autocomplete-tag',
     prop: 'autocompleteTag',
-    component: 'pro-autocomplete-tag',
+    component: 'ele-autocomplete-tag',
     span: 8,
     props: {
       fetchSuggestions: querySearch,
@@ -108,9 +108,9 @@ const columns = ref<IFormColumns>([
     },
   },
   {
-    label: 'pro-radio',
+    label: 'ele-radio',
     prop: 'radio',
-    component: 'pro-radio',
+    component: 'ele-radio',
     span: 8,
     props: {
       data: list,
@@ -118,9 +118,9 @@ const columns = ref<IFormColumns>([
     },
   },
   {
-    label: 'pro-radio-button',
+    label: 'ele-radio-button',
     prop: 'radioButton',
-    component: 'pro-radio-button',
+    component: 'ele-radio-button',
     span: 8,
     props: {
       data: list,
@@ -128,9 +128,9 @@ const columns = ref<IFormColumns>([
     },
   },
   {
-    label: 'pro-checkbox',
+    label: 'ele-checkbox',
     prop: 'checkbox',
-    component: 'pro-checkbox',
+    component: 'ele-checkbox',
     span: 12,
     props: {
       data: list,
@@ -138,9 +138,9 @@ const columns = ref<IFormColumns>([
     },
   },
   {
-    label: 'pro-checkbox-button',
+    label: 'ele-checkbox-button',
     prop: 'checkboxButton',
-    component: 'pro-checkbox-button',
+    component: 'ele-checkbox-button',
     xs: { span: 24, offset: 2 },
     sm: { span: 12, pull: 2 },
     md: 12,
@@ -150,9 +150,9 @@ const columns = ref<IFormColumns>([
     },
   },
   {
-    label: 'pro-select',
+    label: 'ele-select',
     prop: 'select',
-    component: 'pro-select',
+    component: 'ele-select',
     span: 12,
     props: {
       data: list,

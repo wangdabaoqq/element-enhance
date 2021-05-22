@@ -26,7 +26,7 @@ const getList = () => {
   const list: string[] = []
 
   document
-    .querySelectorAll('.pro-column-setting-tree .el-tree-node')
+    .querySelectorAll('.ele-column-setting-tree .el-tree-node')
     .forEach((item) => {
       const value = item.querySelector(
         '.el-tree-node__content .el-tree-node__label'
@@ -39,14 +39,14 @@ const getList = () => {
 describe('ColumnSetting.vue', () => {
   test('test modelValue', async () => {
     const wrapper = _mount({
-      template: '<pro-column-setting v-model="columns" />',
+      template: '<ele-column-setting v-model="columns" />',
       setup() {
         return { columns: ref(columns) }
       },
     })
     const vm = (wrapper.vm as unknown) as { columns: ITableColumns }
 
-    await wrapper.find('.pro-column-setting').trigger('hover')
+    await wrapper.find('.ele-column-setting').trigger('hover')
     expect(getList()).toHaveLength(3)
     expect(getList()).toContain('Date')
     expect(getList()).toContain('Name')

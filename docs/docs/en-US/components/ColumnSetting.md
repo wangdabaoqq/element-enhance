@@ -9,11 +9,11 @@
 ::: demo 通过 `v-model` 绑定数据，默认点击多选框切换列的显隐，直接拖动实现切换排序
 
 <template>
-  <pro-column-setting
+  <ele-column-setting
     v-model="columns"
     style="float:right;margin-bottom:10px"
   />
-  <pro-table
+  <ele-table
     :data="data"
     :columns="columns"
   />
@@ -76,7 +76,7 @@ export default {
 ::: demo 推荐通过 `action` 插槽使用，可以绑定 `Crud` 的 `columns` 和 `table-columns`
 
 <template>
-  <pro-crud
+  <ele-crud
     v-model="form"
     v-model:search="serachForm"
     :columns="columns1"
@@ -87,9 +87,9 @@ export default {
     @delete="deleteRow"
   >
     <template #action>
-      <pro-column-setting v-model="columns1" />
+      <ele-column-setting v-model="columns1" />
     </template>
-  </pro-crud>
+  </ele-crud>
 </template>
 
 <script>
@@ -188,7 +188,7 @@ export default {
 ::: demo 通过 `trigger` 控制触发方式，支持 `hover` `click` `contextmenu`-鼠标右键
 
 <template>
-  <pro-crud
+  <ele-crud
     v-model="form"
     v-model:search="serachForm"
     :columns="columns2"
@@ -200,9 +200,9 @@ export default {
     @delete="deleteRow"
   >
     <template #action>
-      <pro-column-setting v-model="tableColumns" trigger="click" />
+      <ele-column-setting v-model="tableColumns" trigger="click" />
     </template>
-  </pro-crud>
+  </ele-crud>
 </template>
 
 <script>
@@ -299,12 +299,12 @@ export default {
 ::: demo 支持对多级表头的操作，可以将列拖入或拖出子表头
 
 <template>
-  <pro-column-setting
+  <ele-column-setting
     v-model="columns3"
     default-expand-all
     style="float:right;margin-bottom:10px"
   />
-  <pro-table
+  <ele-table
     :data="data"
     :columns="columns3"
   />

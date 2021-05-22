@@ -9,7 +9,7 @@
 ::: demo 组件默认将从 `vue-router` 中获取路由生成路由，格式参考页面下方
 
 <template>
-  <pro-menu />
+  <ele-menu />
 </template>
 
 :::
@@ -19,11 +19,11 @@
 ::: demo 通过传入 `mode` 实现自定义菜单模式
 
 <template>
-  <pro-radio-button
+  <ele-radio-button
     v-model="mode"
     :data="data"
   />
-  <pro-menu :mode="mode" />
+  <ele-menu :mode="mode" />
 </template>
 
 <script>
@@ -51,7 +51,7 @@ export default {
 ::: demo 通过传入 `routes` 实现自定义路由显示
 
 <template>
-  <pro-menu :routes="routes" />
+  <ele-menu :routes="routes" />
 </template>
 
 <script>

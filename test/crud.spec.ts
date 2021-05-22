@@ -47,21 +47,21 @@ const _mount = (options: Record<string, unknown>) =>
       },
     }
   )
-const addClass = '.pro-crud .pro-crud-menu button'
+const addClass = '.ele-crud .ele-crud-menu button'
 const searchClass =
-  '.pro-crud .pro-crud-search .el-form-item:last-child .el-form-item__content button'
+  '.ele-crud .ele-crud-search .el-form-item:last-child .el-form-item__content button'
 const menuClass =
-  '.pro-crud .pro-crud-table .el-table__body-wrapper .el-table__body .el-table__row td:last-child .cell button'
+  '.ele-crud .ele-crud-table .el-table__body-wrapper .el-table__body .el-table__row td:last-child .cell button'
 const formClass =
-  '.pro-crud .pro-crud-dialog .pro-crud-form .el-form-item:last-child button'
+  '.ele-crud .ele-crud-dialog .ele-crud-form .el-form-item:last-child button'
 const dialogClose =
-  '.pro-crud .pro-crud-dialog .el-dialog__header .el-dialog__headerbtn'
+  '.ele-crud .ele-crud-dialog .el-dialog__header .el-dialog__headerbtn'
 const headerClass =
-  '.pro-crud .pro-crud-table .el-table__header-wrapper .el-table__header thead tr'
+  '.ele-crud .ele-crud-table .el-table__header-wrapper .el-table__header thead tr'
 const getHeader = (wrapper: VueWrapper<ComponentPublicInstance>) =>
   wrapper.findAll(headerClass + ' th')
 const bodyClass =
-  '.pro-crud .pro-crud-table .el-table__body-wrapper .el-table__body tbody tr'
+  '.ele-crud .ele-crud-table .el-table__body-wrapper .el-table__body tbody tr'
 const getHeaderList = (wrapper: VueWrapper<ComponentPublicInstance>) =>
   getHeader(wrapper).map((item) => item.find('.cell').text())
 const getBodyItem = (wrapper: VueWrapper<ComponentPublicInstance>, index = 1) =>
@@ -69,7 +69,7 @@ const getBodyItem = (wrapper: VueWrapper<ComponentPublicInstance>, index = 1) =>
     .findAll(`${bodyClass}:nth-child(${index}) td`)
     .map((item) => item.find('.cell').text())
 const getSearchList = (wrapper: VueWrapper<ComponentPublicInstance>) =>
-  wrapper.findAll('.pro-crud .pro-crud-search .pro-form-item')
+  wrapper.findAll('.ele-crud .ele-crud-search .ele-form-item')
 const getSearchLabelList = (wrapper: VueWrapper<ComponentPublicInstance>) =>
   getSearchList(wrapper).map((item) => item.find('.el-form-item__label').text())
 const getSearchComponentList = (wrapper: VueWrapper<ComponentPublicInstance>) =>
@@ -77,7 +77,7 @@ const getSearchComponentList = (wrapper: VueWrapper<ComponentPublicInstance>) =>
     item.find('.el-form-item__content div').classes()
   )
 const getFormList = (wrapper: VueWrapper<ComponentPublicInstance>) =>
-  wrapper.findAll('.pro-crud .pro-crud-dialog .pro-crud-form .pro-form-item')
+  wrapper.findAll('.ele-crud .ele-crud-dialog .ele-crud-form .ele-form-item')
 const getLabelList = (wrapper: VueWrapper<ComponentPublicInstance>) =>
   getFormList(wrapper).map((item) => item.find('.el-form-item__label').text())
 const getComponentList = (wrapper: VueWrapper<ComponentPublicInstance>) =>
@@ -93,7 +93,7 @@ describe('Crud.vue', () => {
   test('columns', async () => {
     const wrapper = await _mount({
       template: `
-        <pro-crud
+        <ele-crud
           v-model="form"
           v-model:search="searchForm"
           :columns="columns"
@@ -175,7 +175,7 @@ describe('Crud.vue', () => {
   test('menu', async () => {
     const wrapper = await _mount({
       template: `
-        <pro-crud
+        <ele-crud
           v-model="form"
           v-model:search="searchForm"
           :columns="columns"
@@ -232,7 +232,7 @@ describe('Crud.vue', () => {
   test('modelValue', async () => {
     const wrapper = await _mount({
       template: `
-        <pro-crud
+        <ele-crud
           v-model="form"
           v-model:search="searchForm"
           :columns="columns"
@@ -250,7 +250,7 @@ describe('Crud.vue', () => {
     })
     const vm = (wrapper.vm as unknown) as { form: Form; searchForm: Form }
     const formInput =
-      '.pro-crud .pro-crud-dialog .pro-crud-form .pro-form-item .el-form-item__content input'
+      '.ele-crud .ele-crud-dialog .ele-crud-form .ele-form-item .el-form-item__content input'
 
     await wrapper.find(addClass).trigger('click')
     expect(wrapper.find(formInput).element.value).toBe('date')
@@ -263,7 +263,7 @@ describe('Crud.vue', () => {
   test('search', async () => {
     const wrapper = await _mount({
       template: `
-        <pro-crud
+        <ele-crud
           v-model="form"
           v-model:search="searchForm"
           :columns="columns"
@@ -281,7 +281,7 @@ describe('Crud.vue', () => {
     })
     const vm = (wrapper.vm as unknown) as { form: Form; searchForm: Form }
     const searchInput =
-      '.pro-crud .pro-crud-search .pro-form-item .el-form-item__content input'
+      '.ele-crud .ele-crud-search .ele-form-item .el-form-item__content input'
 
     expect(wrapper.find(searchInput).element.value).toBe('date')
 
@@ -292,7 +292,7 @@ describe('Crud.vue', () => {
   test('slots', async () => {
     const wrapper = await _mount({
       template: `
-        <pro-crud
+        <ele-crud
           v-model="form"
           v-model:search="searchForm"
           :columns="columns"
@@ -347,7 +347,7 @@ describe('Crud.vue', () => {
           <template #search-slot-label>
             search-slot-label
           </template>
-        </pro-crud>
+        </ele-crud>
       `,
       setup() {
         const form = ref({})

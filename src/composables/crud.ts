@@ -245,7 +245,7 @@ export function useCrudAttrs(
     }
 
     bindDialog.title = bindDialog.title ?? title
-    bindDialog['custom-class'] = bindDialog['custom-class'] ?? 'pro-crud-dialog'
+    bindDialog['custom-class'] = bindDialog['custom-class'] ?? 'ele-crud-dialog'
     bindDialog['before-close'] = beforeClose
     bindDialog.width = bindDialog.width ?? sizeWidth[size.value]
 

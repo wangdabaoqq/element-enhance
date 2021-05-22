@@ -9,7 +9,7 @@
 ::: demo 组件默认将从 `vue-router` 中获取路由生成路由，格式参考页面下方
 
 <template>
-  <pro-layout class="docs-layout" />
+  <ele-layout class="docs-layout" />
 </template>
 
 <style>
@@ -26,7 +26,7 @@
 ::: demo 通过插槽实现更复杂的界面
 
 <template>
-  <pro-layout class="docs-layout">
+  <ele-layout class="docs-layout">
     <template #logo="{ collapse }">
       <span style="line-height: 54px">{{ collapse ? 'L' : 'logo' }}</span>
     </template>
@@ -48,7 +48,7 @@
     <template #main-bottom>
       <p>main-bottom</p>
     </template>
-  </pro-layout>
+  </ele-layout>
 </template>
 
 :::
@@ -58,7 +58,7 @@
 ::: demo 通过传入 `routes` 实现自定义路由显示
 
 <template>
-  <pro-layout :routes="routes" class="docs-layout" />
+  <ele-layout :routes="routes" class="docs-layout" />
 </template>
 
 <script>

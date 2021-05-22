@@ -14,7 +14,7 @@ const getList = (wrapper: VueWrapper<ComponentPublicInstance>) => {
 describe('InputTag.vue', () => {
   test('empty', () => {
     const wrapper = _mount({
-      template: '<pro-input-tag />',
+      template: '<ele-input-tag />',
     })
 
     expect(wrapper.find('input').element.value).toBe('')
@@ -23,7 +23,7 @@ describe('InputTag.vue', () => {
 
   test('test modelValue', async () => {
     const wrapper = _mount({
-      template: '<pro-input-tag v-model="value" />',
+      template: '<ele-input-tag v-model="value" />',
       setup() {
         const value = ref(['test'])
         return { value }
@@ -59,7 +59,7 @@ describe('InputTag.vue', () => {
   test('test props', async () => {
     const wrapper = _mount({
       template: `
-        <pro-input-tag
+        <ele-input-tag
           v-model="value"
           :trigger="trigger"
           :size="size"

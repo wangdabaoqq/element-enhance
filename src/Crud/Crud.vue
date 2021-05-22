@@ -8,7 +8,7 @@
       :size="attrs.size"
       :rules="searchRules"
       :inline="true"
-      class="pro-crud-search"
+      class="ele-crud-search"
       @update:modelValue="upSearchData"
       @submit="searchForm"
       @reset="searchReset"
@@ -53,8 +53,8 @@
         <slot name="search-menu-right" />
       </template>
     </ele-form>
-    <div class="pro-crud-menu">
-      <div class="pro-menu-item">
+    <div class="ele-crud-menu">
+      <div class="ele-menu-item">
         <slot
           :size="attrs.size"
           name="menu-left"
@@ -72,7 +72,7 @@
           name="menu-right"
         />
       </div>
-      <div class="pro-menu-item">
+      <div class="ele-menu-item">
         <slot name="action" />
       </div>
     </div>
@@ -81,7 +81,7 @@
       ref="table"
       :columns="tableColumns"
       :menu="menuColumns"
-      class="pro-crud-table"
+      class="ele-crud-table"
     >
       <template
         v-for="slot in tableSlotList"

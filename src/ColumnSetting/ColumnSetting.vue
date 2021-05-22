@@ -32,7 +32,7 @@
           show-checkbox
           check-strictly
           draggable
-          class="pro-column-setting-tree"
+          class="ele-column-setting-tree"
           @node-drag-start="handleDropStart"
           @node-drag-end="handleDropEnd"
           @check="handleCheckChange"
@@ -102,7 +102,7 @@ function handleCheckChange(data: TableColumn) {
 </script>
 
 <style lang="postcss">
-.pro-column-setting-tree .el-tree-node .el-tree-node__content {
+.ele-column-setting-tree .el-tree-node .el-tree-node__content {
   padding-right: 10px;
 }
 </style>

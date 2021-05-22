@@ -15,7 +15,7 @@ helper({
 })
 
 function reComponentName(title) {
-  return 'pro-' + title.replace(/\B([A-Z])/g, '-$1').toLowerCase()
+  return 'ele-' + title.replace(/\B([A-Z])/g, '-$1').toLowerCase()
 }
 
 function reDocUrl(fileName, header) {

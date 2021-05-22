@@ -9,7 +9,7 @@
 ::: demo 传入 data 数据，自动生成选项
 
 <template>
-  <pro-select
+  <ele-select
     v-model="select"
     :data="data"
   />
@@ -44,7 +44,7 @@ export default {
 ::: demo 将传入 data 数据中的某项设置为 `disabled: true` 即可
 
 <template>
-  <pro-select
+  <ele-select
     v-model="select1"
     :data="list"
   />
@@ -79,7 +79,7 @@ export default {
 ::: demo 通过 config 配置数据键值。`value`- v-model 绑定的键值、`label`-显示键值、`disabled`-控制不可选的键值
 
 <template>
-  <pro-select
+  <ele-select
     v-model="select2"
     :data="data"
     :config="config"
@@ -117,7 +117,7 @@ export default {
 ::: demo 当 `multiple` 为 `true` 时，启用多选。此时绑定的 model-value 为数组格式
 
 <template>
-  <pro-select
+  <ele-select
     v-model="select"
     :data="data"
     multiple

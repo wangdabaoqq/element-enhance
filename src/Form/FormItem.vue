@@ -101,7 +101,7 @@
           :value="modelValue[item.prop]"
           :setValue="upData"
         >
-          <pro-form-component
+          <ele-form-component
             :is="item.component"
             :model-value="modelValue[item.prop]"
             v-bind="item.props"
@@ -110,7 +110,7 @@
         </slot>
       </template>
       <template v-else>
-        <pro-form-component
+        <ele-form-component
           :is="item.component"
           :model-value="modelValue[item.prop]"
           v-bind="item.props"
@@ -155,7 +155,7 @@ function upData(value: unknown) {
 </script>
 
 <style lang="postcss">
-.pro-form-item .children-form {
+.ele-form-item .children-form {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -163,7 +163,7 @@ function upData(value: unknown) {
   width: 100%;
   & .children-form-item {
     flex: 1;
-    & .pro-form-item {
+    & .ele-form-item {
       margin-bottom: 22px;
     }
   }

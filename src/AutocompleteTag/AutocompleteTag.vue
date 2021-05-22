@@ -1,5 +1,5 @@
 <template>
-  <div class="ele-autocomplete-tag pro-input-tag">
+  <div class="ele-autocomplete-tag ele-input-tag">
     <el-tag
       v-for="(item, index) in list"
       :key="index"

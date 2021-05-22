@@ -1,5 +1,5 @@
 <template>
-  <pro-crud
+  <ele-crud
     ref="crud"
     v-model="form"
     v-model:search="serachForm"
@@ -21,7 +21,7 @@
     @delete="deleteRow"
   >
     <template #action>
-      <pro-column-setting
+      <ele-column-setting
         v-model="columns"
         :size="size"
         trigger="click"
@@ -48,7 +48,7 @@
         {{ row.name }}
       </el-tag>
     </template>
-  </pro-crud>
+  </ele-crud>
 </template>
 
 <script setup lang="ts">

@@ -15,7 +15,7 @@ const getList = (wrapper: VueWrapper<ComponentPublicInstance>) => {
 describe('AutocompleteTag.vue', () => {
   test('empty', () => {
     const wrapper = _mount({
-      template: '<pro-autocomplete-tag />',
+      template: '<ele-autocomplete-tag />',
     })
 
     expect(wrapper.find('input').element.value).toBe('')
@@ -25,7 +25,7 @@ describe('AutocompleteTag.vue', () => {
   test('test modelValue', async () => {
     const wrapper = _mount({
       template: `
-        <pro-autocomplete-tag
+        <ele-autocomplete-tag
           v-model="value"
           :fetch-suggestions="querySearch"
         />
@@ -56,7 +56,7 @@ describe('AutocompleteTag.vue', () => {
     })
     const vm = (wrapper.vm as unknown) as { value: string[] }
 
-    expect(wrapper.find('.pro-input-tag .el-autocomplete')).not.toBeNull()
+    expect(wrapper.find('.ele-input-tag .el-autocomplete')).not.toBeNull()
     expect(wrapper.find('.el-autocomplete-suggestion__list')).not.toBeNull()
 
     /** init */
@@ -87,7 +87,7 @@ describe('AutocompleteTag.vue', () => {
   test('test props', async () => {
     const wrapper = _mount({
       template: `
-        <pro-autocomplete-tag
+        <ele-autocomplete-tag
           v-model="value"
           :trigger="trigger"
           :size="size"

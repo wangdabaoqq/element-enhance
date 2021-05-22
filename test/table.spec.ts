@@ -31,7 +31,7 @@ const _mount = (options: Record<string, unknown>) =>
     ...options,
   })
 const headerClass =
-  '.pro-table .el-table__header-wrapper .el-table__header thead tr'
+  '.ele-table .el-table__header-wrapper .el-table__header thead tr'
 const getHeader = (wrapper: VueWrapper<ComponentPublicInstance>) =>
   wrapper.findAll(headerClass + ' th')
 const getMultiHeader = (wrapper: VueWrapper<ComponentPublicInstance>) =>
@@ -42,7 +42,7 @@ const getHeaderClass = (
   wrapper: VueWrapper<ComponentPublicInstance>,
   index = 0
 ) => getHeader(wrapper)[index].classes()
-const bodyClass = '.pro-table .el-table__body-wrapper .el-table__body tbody tr'
+const bodyClass = '.ele-table .el-table__body-wrapper .el-table__body tbody tr'
 const getBody = (wrapper: VueWrapper<ComponentPublicInstance>) =>
   wrapper.findAll(bodyClass)
 const getBodyItem = (wrapper: VueWrapper<ComponentPublicInstance>, index = 1) =>
@@ -54,7 +54,7 @@ const getBodyClass = (wrapper: VueWrapper<ComponentPublicInstance>) =>
 const getCheckBox = (wrapper: VueWrapper<ComponentPublicInstance>) =>
   wrapper.find(headerClass + ' th .cell .el-checkbox')
 const getPager = (wrapper: VueWrapper<ComponentPublicInstance>, classes = '') =>
-  wrapper.find('.pro-pagination .el-pager .number' + classes)
+  wrapper.find('.ele-pagination .el-pager .number' + classes)
 const getSizesItem = (classes = '') =>
   document.querySelector(
     '.el-select__popper .el-select-dropdown__item' + classes
@@ -67,7 +67,7 @@ describe('Table.vue', () => {
 
   test('columns', async () => {
     const wrapper = await _mount({
-      template: '<pro-table :columns="columns" />',
+      template: '<ele-table :columns="columns" />',
       setup() {
         return { columns: ref(columns) }
       },
@@ -94,7 +94,7 @@ describe('Table.vue', () => {
 
   test('data', async () => {
     const wrapper = await _mount({
-      template: '<pro-table :columns="columns" :data="data" />',
+      template: '<ele-table :columns="columns" :data="data" />',
       setup() {
         return { columns, data: ref(tableData) }
       },
@@ -110,7 +110,7 @@ describe('Table.vue', () => {
 
   test('idnex', async () => {
     const wrapper = await _mount({
-      template: '<pro-table :columns="columns" :index="index" />',
+      template: '<ele-table :columns="columns" :index="index" />',
       setup() {
         const index = ref<boolean | ITableIndexColumns>({ label: '#' })
         return { columns, index }
@@ -135,7 +135,7 @@ describe('Table.vue', () => {
 
   test('expand', async () => {
     const wrapper = await _mount({
-      template: '<pro-table :columns="columns" :expand="expand" />',
+      template: '<ele-table :columns="columns" :expand="expand" />',
       setup() {
         const expand = ref<boolean | ITableExpandColumns>({ label: '>' })
         return { columns, expand }
@@ -160,7 +160,7 @@ describe('Table.vue', () => {
 
   test('selection', async () => {
     const wrapper = await _mount({
-      template: '<pro-table :columns="columns" :selection="selection" />',
+      template: '<ele-table :columns="columns" :selection="selection" />',
       setup() {
         return { columns, selection: ref(true) }
       },
@@ -178,7 +178,7 @@ describe('Table.vue', () => {
 
   test('menu', async () => {
     const wrapper = await _mount({
-      template: '<pro-table :columns="columns" :menu="menu" />',
+      template: '<ele-table :columns="columns" :menu="menu" />',
       setup() {
         const menu = ref<boolean | ITableMenuColumns>({ label: 'Menu' })
         return { columns, menu }
@@ -205,7 +205,7 @@ describe('Table.vue', () => {
   test('pagination', async () => {
     const wrapper = await _mount({
       template: `
-        <pro-table
+        <ele-table
           v-model:current-page="currentPage"
           v-model:page-size="pageSize"
           :columns="columns"
@@ -228,7 +228,7 @@ describe('Table.vue', () => {
       pagination: IPagination
     }
 
-    expect(wrapper.find('.pro-pagination')).not.toBeNull()
+    expect(wrapper.find('.ele-pagination')).not.toBeNull()
 
     await getPager(wrapper, ':nth-child(2)').trigger('click')
     expect(vm.currentPage).toBe(2)
@@ -241,25 +241,25 @@ describe('Table.vue', () => {
 
     await (vm.pageSize = 10)
     await wrapper
-      .find('.pro-pagination .el-pagination__sizes .select-trigger')
+      .find('.ele-pagination .el-pagination__sizes .select-trigger')
       .trigger('click')
     expect(getSizesItem('.selected')?.innerHTML).toMatch(/10/)
 
     await (vm.pagination.layout = 'sizes, prev, pager, next')
-    expect(wrapper.find('.pro-pagination .el-pagination__total').exists()).toBe(
+    expect(wrapper.find('.ele-pagination .el-pagination__total').exists()).toBe(
       false
     )
-    expect(wrapper.find('.pro-pagination .el-pagination__jump').exists()).toBe(
+    expect(wrapper.find('.ele-pagination .el-pagination__jump').exists()).toBe(
       false
     )
 
     await (vm.total = 0)
-    expect(wrapper.find('.pro-pagination').exists()).toBe(false)
+    expect(wrapper.find('.ele-pagination').exists()).toBe(false)
   })
 
   test('align', async () => {
     const wrapper = await _mount({
-      template: '<pro-table :columns="columns" :data="data" :align="align" />',
+      template: '<ele-table :columns="columns" :data="data" :align="align" />',
       setup() {
         const align = ref('center')
         return { columns, data: tableData, align }
@@ -278,7 +278,7 @@ describe('Table.vue', () => {
   test('headerAlign', async () => {
     const wrapper = await _mount({
       template:
-        '<pro-table :columns="columns" :data="data" :headerAlign="align" />',
+        '<ele-table :columns="columns" :data="data" :headerAlign="align" />',
       setup() {
         const align = ref('center')
         return { columns, data: tableData, align }
@@ -297,7 +297,7 @@ describe('Table.vue', () => {
   test('slots', async () => {
     const wrapper = await _mount({
       template: `
-        <pro-table
+        <ele-table
           :columns="columns"
           :data="data"
           :menu="menu"
@@ -311,7 +311,7 @@ describe('Table.vue', () => {
           <template #menu="{ size }">
             @menu-{{ size }}
           </template>
-        </pro-table>
+        </ele-table>
       `,
       setup() {
         const _columns = [...columns]
@@ -327,7 +327,7 @@ describe('Table.vue', () => {
 
   test('multi header', async () => {
     const wrapper = await _mount({
-      template: '<pro-table :columns="columns" />',
+      template: '<ele-table :columns="columns" />',
       setup() {
         const _columns = ref<ITableColumns>([
           {

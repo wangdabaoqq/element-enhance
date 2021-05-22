@@ -9,7 +9,7 @@ const _mount = (options: Record<string, unknown>) =>
     ...options,
   })
 const getList = (wrapper: VueWrapper<ComponentPublicInstance>, calss = '') => {
-  const className = '.pro-radio .el-radio' + calss
+  const className = '.ele-radio .el-radio' + calss
   return wrapper
     .findAll(className)
     .map((item) => item.find('.el-radio__label').text())
@@ -18,7 +18,7 @@ const getList = (wrapper: VueWrapper<ComponentPublicInstance>, calss = '') => {
 describe('Radio.vue', () => {
   test('test modelValue', async () => {
     const wrapper = _mount({
-      template: '<pro-radio v-model="value" :data="data" />',
+      template: '<ele-radio v-model="value" :data="data" />',
       setup() {
         const value = ref('JavaScript')
         return { value, data: dicList }
@@ -42,7 +42,7 @@ describe('Radio.vue', () => {
 
   test('change data', async () => {
     const wrapper = _mount({
-      template: '<pro-radio v-model="value" :data="data" />',
+      template: '<ele-radio v-model="value" :data="data" />',
       setup() {
         const value = ref('JavaScript')
         const data = ref(dicList)

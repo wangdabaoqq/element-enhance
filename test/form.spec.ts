@@ -24,9 +24,9 @@ const _mount = (options: Record<string, unknown>) =>
     }
   )
 const buttonClass =
-  '.pro-form .el-form-item:last-child .el-form-item__content button'
+  '.ele-form .el-form-item:last-child .el-form-item__content button'
 const getFormList = (wrapper: VueWrapper<ComponentPublicInstance>) =>
-  wrapper.findAll('.pro-form .pro-form-item')
+  wrapper.findAll('.ele-form .ele-form-item')
 const getFormClassList = (wrapper: VueWrapper<ComponentPublicInstance>) =>
   getFormList(wrapper).map((item) => item.classes())
 const getLabelList = (wrapper: VueWrapper<ComponentPublicInstance>) =>
@@ -41,7 +41,7 @@ const getFormContent = (
   wrapper: VueWrapper<ComponentPublicInstance>,
   className = ''
 ) =>
-  wrapper.find('.pro-form .pro-form-item .el-form-item__content ' + className)
+  wrapper.find('.ele-form .ele-form-item .el-form-item__content ' + className)
 
 describe('Table.vue', () => {
   afterEach(() => {
@@ -50,7 +50,7 @@ describe('Table.vue', () => {
 
   test('columns', async () => {
     const wrapper = await _mount({
-      template: '<pro-form v-model="form" :columns="columns" />',
+      template: '<ele-form v-model="form" :columns="columns" />',
       setup() {
         const form = ref({})
         return { form, columns: ref([...columns]) }
@@ -93,7 +93,7 @@ describe('Table.vue', () => {
 
   test('sub-form', async () => {
     const wrapper = await _mount({
-      template: '<pro-form v-model="form" :columns="columns" />',
+      template: '<ele-form v-model="form" :columns="columns" />',
       setup() {
         const form = ref({})
         const _columns = ref<IFormColumns>([
@@ -139,7 +139,7 @@ describe('Table.vue', () => {
   test('slots', async () => {
     const wrapper = await _mount({
       template: `
-        <pro-form
+        <ele-form
           v-model="form"
           :columns="columns"
         >
@@ -159,7 +159,7 @@ describe('Table.vue', () => {
           <template #menu-right>
             <button>menu-right</button>
           </template>
-        </pro-form>
+        </ele-form>
       `,
       setup() {
         const form = ref<{ slot: string }>({ slot: '' })
@@ -195,7 +195,7 @@ describe('Table.vue', () => {
     }
 
     const wrapper = _mount({
-      template: '<pro-form v-model="form" :columns="columns" />',
+      template: '<ele-form v-model="form" :columns="columns" />',
       setup() {
         const form = ref<Form>({
           input: '123',
@@ -239,7 +239,7 @@ describe('Table.vue', () => {
 
   test('menu', async () => {
     const wrapper = await _mount({
-      template: '<pro-form v-model="form" :columns="columns" :menu="menu" />',
+      template: '<ele-form v-model="form" :columns="columns" :menu="menu" />',
       setup() {
         const form = ref({})
         const menu = ref<IFormMenuColumns>({})
@@ -258,7 +258,7 @@ describe('Table.vue', () => {
     expect(
       wrapper
         .find(
-          '.pro-form .el-form-item:last-child .el-form-item__content button.el-button--danger'
+          '.ele-form .el-form-item:last-child .el-form-item__content button.el-button--danger'
         )
         .exists()
     ).toBeTruthy()
@@ -269,7 +269,7 @@ describe('Table.vue', () => {
 
   test('grid layout', async () => {
     const wrapper = await _mount({
-      template: '<pro-form v-model="form" :columns="columns" />',
+      template: '<ele-form v-model="form" :columns="columns" />',
       setup() {
         const form = ref({})
         const columns = ref([
@@ -346,7 +346,7 @@ describe('Table.vue', () => {
 
   // test('event', async () => {
   //   const wrapper = await _mount({
-  //     template: '<pro-form v-model="form" :columns="columns" />',
+  //     template: '<ele-form v-model="form" :columns="columns" />',
   //     setup() {
   //       const form = ref({})
   //       return { form, columns }

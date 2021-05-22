@@ -1,5 +1,5 @@
 <template>
-  <pro-table
+  <ele-table
     v-model:current-page="currentPage"
     v-model:page-size="pageSize"
     :data="data"
@@ -32,8 +32,8 @@
         test{{ size }}
       </el-button>
     </template>
-  </pro-table>
-  <pro-table
+  </ele-table>
+  <ele-table
     v-model:current-page="currentPage"
     v-model:page-size="pageSize"
     :data="data"
@@ -43,7 +43,7 @@
     <template #name="{ row }">
       - {{ row.name }} -
     </template>
-  </pro-table>
+  </ele-table>
 </template>
 
 <script setup lang="ts">

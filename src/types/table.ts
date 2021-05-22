@@ -18,7 +18,7 @@ export interface ITableProps<T = UnknownObject> extends TableColumnsProps {
   pagination?: IPagination
 }
 
-/** Table Column Options for pro-table */
+/** Table Column Options for ele-table */
 export interface TableColumnsProps {
   /** whether to hide extra content and show them in a tooltip when hovering on the cell */
   showOverflowTooltip?: boolean
@@ -49,7 +49,7 @@ interface TableCommonColumn<T = UnknownObject>
   sortBy?: string | string[] | ((row: T, index: number) => void)
   /** the order of the sorting strategies used when sorting the data, works when sortable is true. Accepts an array, as the user clicks on the header, the column is sorted in order of the elements in the array */
   sortOrders?: Array<'ascending' | 'descending' | null>
-  /** whether column width can be resized, works when border of pro-table is true */
+  /** whether column width can be resized, works when border of ele-table is true */
   resizable?: boolean
   /** function that formats cell content */
   formatter?: UnknownFunction

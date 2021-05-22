@@ -9,7 +9,7 @@ const _mount = (options: Record<string, unknown>) =>
     ...options,
   })
 const getList = (wrapper: VueWrapper<ComponentPublicInstance>, calss = '') => {
-  const className = '.pro-checkbox-button .el-checkbox-button' + calss
+  const className = '.ele-checkbox-button .el-checkbox-button' + calss
   return wrapper
     .findAll(className)
     .map((item) => item.find('.el-checkbox-button__inner').text())
@@ -18,7 +18,7 @@ const getList = (wrapper: VueWrapper<ComponentPublicInstance>, calss = '') => {
 describe('CheckboxButton.vue', () => {
   test('test modelValue', async () => {
     const wrapper = _mount({
-      template: '<pro-checkbox-button v-model="value" :data="data" />',
+      template: '<ele-checkbox-button v-model="value" :data="data" />',
       setup() {
         const value = ref(['JavaScript'])
         return { value, data: dicList }
@@ -42,7 +42,7 @@ describe('CheckboxButton.vue', () => {
 
   test('change data', async () => {
     const wrapper = _mount({
-      template: '<pro-checkbox-button v-model="value" :data="data" />',
+      template: '<ele-checkbox-button v-model="value" :data="data" />',
       setup() {
         const value = ref(['JavaScript'])
         const data = ref(dicList)

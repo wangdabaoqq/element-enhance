@@ -9,7 +9,7 @@ const _mount = (options: Record<string, unknown>) =>
     ...options,
   })
 const getList = (wrapper: VueWrapper<ComponentPublicInstance>, calss = '') => {
-  const className = '.pro-checkbox .el-checkbox' + calss
+  const className = '.ele-checkbox .el-checkbox' + calss
   return wrapper
     .findAll(className)
     .map((item) => (item ? item.find('.el-checkbox__label').text() : ''))
@@ -18,7 +18,7 @@ const getList = (wrapper: VueWrapper<ComponentPublicInstance>, calss = '') => {
 describe('Checkbox.vue', () => {
   test('test modelValue', async () => {
     const wrapper = _mount({
-      template: '<pro-checkbox v-model="value" :data="data" />',
+      template: '<ele-checkbox v-model="value" :data="data" />',
       setup() {
         const value = ref(['JavaScript'])
         return { value, data: dicList }
@@ -42,7 +42,7 @@ describe('Checkbox.vue', () => {
 
   test('change data', async () => {
     const wrapper = _mount({
-      template: '<pro-checkbox v-model="value" :data="data" />',
+      template: '<ele-checkbox v-model="value" :data="data" />',
       setup() {
         const value = ref(['JavaScript'])
         const data = ref(dicList)

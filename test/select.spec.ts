@@ -9,7 +9,7 @@ const _mount = (options: Record<string, unknown>) =>
     ...options,
   })
 const selectItemClass =
-  '.pro-select .el-select__popper .el-select-dropdown__item'
+  '.ele-select .el-select__popper .el-select-dropdown__item'
 const getList = (wrapper: VueWrapper<ComponentPublicInstance>, calss = '') =>
   wrapper
     .findAll(selectItemClass + calss)
@@ -23,7 +23,7 @@ describe('Select.vue', () => {
   test('test modelValue', async () => {
     const wrapper = _mount({
       template: `
-        <pro-select
+        <ele-select
           v-model="value"
           :data="data"
           :popper-append-to-body="false"
@@ -57,7 +57,7 @@ describe('Select.vue', () => {
   test('change data', async () => {
     const wrapper = _mount({
       template: `
-        <pro-select
+        <ele-select
           v-model="value"
           :data="data"
           :popper-append-to-body="false"

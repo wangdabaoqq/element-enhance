@@ -8,7 +8,7 @@
 - 支持 `el-input` `el-switch` 等
 - 不支持 `el-upload` `el-select` `el-radio-group` `el-checkbox-group` `input` 等
 
-使用相关 `pro-select` `pro-radio` `pro-checkbox` 或其它第三方组件代替
+使用相关 `ele-select` `ele-radio` `ele-checkbox` 或其它第三方组件代替
 :::
 
 ::: warning 警告
@@ -31,7 +31,7 @@ app.component(ElInput.name, ElInput)
 ::: demo 传入 columns 数据，自动生成表单。操作按钮需要通过 menu 插槽传入
 
 <template>
-  <pro-form
+  <ele-form
     v-model="form"
     :columns="columns"
     label-width="100px"
@@ -80,7 +80,7 @@ export default {
 ::: demo 通过 columns 的 `component` 定义该项生成什么组件，通过 `props` 可以向组件中传值。要求对应组件可以通过 v-model 绑定值
 
 <template>
-  <pro-form
+  <ele-form
     v-model="form1"
     :columns="columns1"
     label-width="100px"
@@ -113,7 +113,7 @@ export default {
       {
         label: 'input-tag',
         prop: 'inputTag',
-        component: 'pro-input-tag',
+        component: 'ele-input-tag',
         props: {
           placeholder: '请输入内容后点击空格按键',
         },
@@ -121,7 +121,7 @@ export default {
       {
         label: 'radio',
         prop: 'radio',
-        component: 'pro-radio',
+        component: 'ele-radio',
         props: {
           data: list,
         },
@@ -129,7 +129,7 @@ export default {
       {
         label: 'checkbox',
         prop: 'checkbox',
-        component: 'pro-checkbox',
+        component: 'ele-checkbox',
         props: {
           data: list,
         },
@@ -137,7 +137,7 @@ export default {
       {
         label: 'select',
         prop: 'select',
-        component: 'pro-select',
+        component: 'ele-select',
         props: {
           data: list,
         },
@@ -159,7 +159,7 @@ export default {
 ::: demo 通过 columns 的 slot 配置是否开启自定义插槽功能。虽然在启用插槽后可以通过 `v-model="form.slot"` 这种方式绑定值，但更推荐使用 `value` 与 `setValue`
 
 <template>
-  <pro-form
+  <ele-form
     v-model="form2"
     :columns="columns2"
     label-width="100px"
@@ -186,7 +186,7 @@ export default {
         />
       </el-upload>
     </template>
-  </pro-form>
+  </ele-form>
 </template>
 
 <script>
@@ -250,7 +250,7 @@ export default {
 ::: demo 通过 menu 配置按钮
 
 <template>
-  <pro-form
+  <ele-form
     v-model="form"
     :columns="columns"
     :menu="menu"
@@ -297,7 +297,7 @@ export default {
 ::: demo 通过 columns 的 `children` 配置子表单，当然你也可以配置多层的 `children` 结构实现反复套娃
 
 <template>
-  <pro-form
+  <ele-form
     v-model="form3"
     :columns="columns3"
     label-width="100px"
@@ -368,7 +368,7 @@ export default {
 ::: demo 像 el-form 一样可以通过 `rules` 配置表单验证。对于子表单更推荐使用 columns 里面的 `rules` 字段实现验证。否则你需要通过 `${父级的 prop}.${当前项的 index}.${当前的 prop}` 这种方式配置子表单的验证
 
 <template>
-  <pro-form
+  <ele-form
     v-model="form4"
     :columns="columns4"
     :rules="rules"
@@ -445,7 +445,7 @@ export default {
 ::: demo 如果传入的 `columns` 是一个响应性数据，动态的修改 columns 表单也会随之改变。由此你可以根据需要动态的控制表单的内容，或者实现从后台加载数据实现表单
 
 <template>
-  <pro-form
+  <ele-form
     v-model="form5"
     :columns="columns5"
     :menu="menu5"
@@ -467,7 +467,7 @@ export default {
         减少
       </el-button>
     </template>
-  </pro-form>
+  </ele-form>
 </template>
 
 <script>
@@ -518,10 +518,10 @@ export default {
 
 ### 栅格布局
 
-::: demo 与使用 `el-row` 和 `el-col` 组件相同 (`el-row` 对应 `pro-form`；`el-col` 对应 `columns`)，通过相关配置可以自由地组合布局。**当 `inline` 为 `true` 时无效**
+::: demo 与使用 `el-row` 和 `el-col` 组件相同 (`el-row` 对应 `ele-form`；`el-col` 对应 `columns`)，通过相关配置可以自由地组合布局。**当 `inline` 为 `true` 时无效**
 
 <template>
-  <pro-form
+  <ele-form
     v-model="form6"
     :columns="columns6"
     :gutter="20"
@@ -710,7 +710,7 @@ props: {
 
 ```vue
 <template>
-  <pro-form ref="ruleForm" v-model="form" :columns="columns" />
+  <ele-form ref="ruleForm" v-model="form" :columns="columns" />
 </template>
 
 <script lang="ts">
