@@ -1,16 +1,16 @@
-# Element - Enhance
+## Element - Enhance
 
-> a component library for Vue 3 base on element-plus
+> a component library for vue-next base on element-plus
 
 [Documentation](https://gitee.com/Jmysy/element-enhance) | [Changelog](./CHANGELOG.md)
 
-## Install
+### Install
 
 ```sh
 npm i element-enhance
 ```
 
-## Use
+### Use
 
 ```js
 import { createApp } from 'vue'
