@@ -10,7 +10,7 @@ const routes: IRouteRecordRaw[] = [
     path: '/dev',
     redirect: '/dev/Layout',
     component: BaseLayout,
-    meta: { title: '开发', icon: 'el-icon-edit' },
+    meta: { title: '开发', icon: 'el-icon-position' },
     children: [
       {
         path: '/dev/Layout',

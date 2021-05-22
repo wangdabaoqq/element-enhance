@@ -1,6 +1,6 @@
 {
   "name": "element-enhance",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "a component library for Vue 3 base on element-plus",
   "main": "lib/element-enhance.umd.js",
   "module": "lib/element-enhance.es.js",

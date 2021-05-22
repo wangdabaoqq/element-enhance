@@ -6,7 +6,7 @@ const zhCN: IRouteRecordRaw[] = [
     path: '/',
     redirect: '/zh-CN/guide/',
     component: BaseLayout,
-    meta: { title: '指南', icon: 'el-icon-house' },
+    meta: { title: '指南', icon: 'el-icon-burger' },
     children: [
       {
         path: '/zh-CN/guide/introduction',
@@ -24,7 +24,7 @@ const zhCN: IRouteRecordRaw[] = [
     path: '/zh-CN/components/',
     redirect: '/zh-CN/components/layout',
     component: BaseLayout,
-    meta: { title: '组件', icon: 'el-icon-takeaway-box' },
+    meta: { title: '组件', icon: 'el-icon-copy-document' },
     children: [
       {
         path: '/zh-CN/components/layout',

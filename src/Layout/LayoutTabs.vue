@@ -12,26 +12,48 @@
       :key="item.path"
       :name="item.path"
       :label="item.title"
-    />
+    >
+      <template #label>
+        {{ item.title }}
+      </template>
+    </el-tab-pane>
   </el-tabs>
 </template>
 
 <script setup lang="ts">
 import { ElTabs, ElTabPane } from 'element-plus'
 import { useTabs } from '../composables'
-
+import { useRoute } from 'vue-router'
+import { computed } from '@vue/runtime-core'
 const { active, list, to, close } = useTabs()
+
+const route = useRoute()
 </script>
 
 <style lang="postcss">
 .ele-tabs.el-tabs--card > .el-tabs__header {
   margin: 0px !important;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: none;
+}
+.ele-tabs.el-tabs--card > .el-tabs__header .el-tabs__item {
+  background: white;
+  margin-right: 6px;
+  margin-top: 6px;
+  line-height: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 2px;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
 }
 .ele-tabs.el-tabs--card > .el-tabs__header .el-tabs__item.is-active {
   border-bottom: 1px transparent solid !important;
 }
 .ele-tabs.el-tabs--card > .el-tabs__header .el-tabs__nav {
   border-radius: 0px;
+  border: none;
 }
 .ele-tabs.el-tabs--card > .el-tabs__header .el-tabs__nav-prev {
   width: 40px;

@@ -3,8 +3,14 @@
 ::: demo 组件默认将从 `vue-router` 中获取路由生成路由，[格式参考](./Layout#参考)
 
 <template>
-  <ele-menu />
+  <ele-menu class="demo-menu"/>
 </template>
+
+<style>
+.demo-menu {
+  width: 300px;
+}
+</style>
 
 :::
 
@@ -17,7 +23,7 @@
     v-model="mode"
     :data="data"
   />
-  <ele-menu :mode="mode" />
+  <ele-menu :mode="mode"/>
 </template>
 
 <script>
@@ -38,14 +44,20 @@ export default {
 }
 </script>
 
+<style>
+.demo-menu {
+  width: 300px;
+}
+</style>
+
 :::
 
-### 自定义路由
+#### 路由
 
 ::: demo 通过传入 `routes` 实现自定义路由显示
 
 <template>
-  <ele-menu :routes="routes" />
+  <ele-menu :routes="routes"  class="demo-menu"/>
 </template>
 
 <script>
@@ -67,9 +79,15 @@ export default {
 }
 </script>
 
+<style>
+.demo-menu {
+  width: 300px;
+}
+</style>
+
 :::
 
-### 配置
+#### 配置
 
 | 参数                | 说明                                                 | 类型    | 可选值                | 默认值                 |
 | :------------------ | :--------------------------------------------------- | :------ | :-------------------- | :--------------------- |
@@ -84,7 +102,7 @@ export default {
 | menu-trigger        | 子菜单打开的触发方式(只在 mode 为 horizontal 时有效) | string  | hover / click         | hover                  |
 | collapse-transition | 是否开启折叠动画                                     | boolean | -                     | true                   |
 
-### 插槽
+#### 插槽
 
 | name | 说明                                                 |
 | :--- | :--------------------------------------------------- |
