@@ -1,6 +1,6 @@
 ##### 基础
 
-::: demo 组件默认将从 `vue-router` 中获取路由生成路由，[格式参考](#参考)
+::: demo 组件默认将从 `vue-router` 中获取路由生成路由，[格式参考](https://github.com/Jmysy/element-enhance/blob/master/docs/src/router/zh-CN.ts)
 
 <template>
   <ele-layout class="demo-layout" />
@@ -9,7 +9,7 @@
 <style>
 .demo-layout {
   border: 1px solid whitesmoke;
-  height: 400px;
+  height: 460px;
 }
 </style>
 
@@ -17,7 +17,7 @@
 
 ##### 主题
 
-::: demo 组件默认将从 `vue-router` 中获取路由生成路由，[格式参考](#参考)
+::: Layout 提供 `theme` 属性配置侧边主题
 
 <template>
   <ele-layout theme="black" class="demo-layout" />
@@ -34,7 +34,7 @@
 
 ##### 更多
 
-::: demo 组件默认将从 `vue-router` 中获取路由生成路由，[格式参考](#参考)
+::: demo 组件默认将从 `vue-router` 中获取路由生成路由，[格式参考](https://github.com/Jmysy/element-enhance/blob/master/docs/src/router/zh-CN.ts)
 
 <template>
   <ele-layout 
@@ -119,13 +119,13 @@ export default {
 
 ##### 配置
 
-| 参数            | 说明                                | 类型    | 默认值                 |
-| :-------------- | :---------------------------------- | :------ | :--------------------- |
-| routes          | 当前程序路由                        | array   | 从 `vue-router` 中获取 |
-| transition      | 定义页面过度渐变动画                | string  | -                      |
-| collapse        | 默认是否收起菜单                    | boolean | false                  |
-| default-openeds | 当前打开的 sub-menu 的 index 的数组 | Array   | -                      |
-| unique-opened   | 是否只保持一个子菜单的展开          | boolean | false                  |
+| 参数          | 说明                       | 类型    | 默认值                 |
+| :------------ | :------------------------- | :------ | :--------------------- |
+| routes        | 当前程序路由               | array   | 从 `vue-router` 中获取 |
+| transition    | 定义页面过度渐变动画       | string  | -                      |
+| collapse      | 默认是否收起菜单           | boolean | false                  |
+| unique-opened | 是否只保持一个子菜单的展开 | boolean | false                  |
+| theme         | 切换布局主题               | string  | white                  |
 
 ##### 插槽
 
