@@ -16,11 +16,11 @@ export default {
   setup() {
     const radio = ref('')
     const data = ref([
-      { value: 'Go', label: 'go' },
-      { value: 'JavaScript', label: 'javascript' },
-      { value: 'Python', label: 'python' },
-      { value: 'Dart', label: 'dart' },
-      { value: 'V', label: 'v' },
+      { value: '1', label: '一' },
+      { value: '2', label: '二' },
+      { value: '3', label: '三' },
+      { value: '4', label: '四' },
+      { value: '5', label: '五' },
     ])
 
     return {
@@ -51,11 +51,11 @@ export default {
   setup() {
     const radio1 = ref('')
     const list = ref([
-      { value: 'Go', label: 'go', disabled: true },
-      { value: 'JavaScript', label: 'javascript' },
-      { value: 'Python', label: 'python' },
-      { value: 'Dart', label: 'dart' },
-      { value: 'V', label: 'v' },
+      { value: '1', label: '一' },
+      { value: '2', label: '二' },
+      { value: '3', label: '三' },
+      { value: '4', label: '四' },
+      { value: '5', label: '五' },
     ])
 
     return {
@@ -86,13 +86,13 @@ import { ref } from 'vue'
 export default {
   setup() {
     const radio2 = ref('')
-    const config = ref({ value: 'label', label: 'value' })
+    const config = ref({ value: 'value', label: 'label' })
     const data = ref([
-      { value: 'Go', label: 'go' },
-      { value: 'JavaScript', label: 'javascript' },
-      { value: 'Python', label: 'python' },
-      { value: 'Dart', label: 'dart' },
-      { value: 'V', label: 'v' },
+      { value: '1', label: '一' },
+      { value: '2', label: '二' },
+      { value: '3', label: '三' },
+      { value: '4', label: '四' },
+      { value: '5', label: '五' },
     ])
 
     return {
@@ -124,11 +124,11 @@ export default {
   setup() {
     const radiobutton = ref('')
     const data = ref([
-      { value: 'Go', label: 'go' },
-      { value: 'JavaScript', label: 'javascript' },
-      { value: 'Python', label: 'python' },
-      { value: 'Dart', label: 'dart' },
-      { value: 'V', label: 'v' },
+      { value: '1', label: '一' },
+      { value: '2', label: '二' },
+      { value: '3', label: '三' },
+      { value: '4', label: '四' },
+      { value: '5', label: '五' },
     ])
 
     return {

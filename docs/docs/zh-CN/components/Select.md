@@ -1,4 +1,4 @@
-#### 基础
+##### 基础
 
 ::: demo 传入 data 数据，自动生成选项
 
@@ -16,11 +16,11 @@ export default {
   setup() {
     const select = ref('')
     const data = ref([
-      { value: 'Go', label: 'go' },
-      { value: 'JavaScript', label: 'javascript' },
-      { value: 'Python', label: 'python' },
-      { value: 'Dart', label: 'dart' },
-      { value: 'V', label: 'v' },
+      { value: '1', label: '一' },
+      { value: '2', label: '二' },
+      { value: '3', label: '三' },
+      { value: '4', label: '四' },
+      { value: '5', label: '五' },
     ])
 
     return {
@@ -33,7 +33,7 @@ export default {
 
 :::
 
-#### 可选
+##### 可选
 
 ::: demo 将传入 data 数据中的某项设置为 `disabled: true` 即可
 
@@ -51,11 +51,11 @@ export default {
   setup() {
     const select1 = ref('')
     const list = ref([
-      { value: 'Go', label: 'go', disabled: true },
-      { value: 'JavaScript', label: 'javascript' },
-      { value: 'Python', label: 'python' },
-      { value: 'Dart', label: 'dart' },
-      { value: 'V', label: 'v' },
+      { value: '1', label: '一' },
+      { value: '2', label: '二' },
+      { value: '3', label: '三' },
+      { value: '4', label: '四' },
+      { value: '5', label: '五' },
     ])
 
     return {
@@ -68,7 +68,7 @@ export default {
 
 :::
 
-#### 字段
+##### 字段
 
 ::: demo 通过 config 配置数据键值。`value`- v-model 绑定的键值、`label`-显示键值、`disabled`-控制不可选的键值
 
@@ -88,11 +88,11 @@ export default {
     const select2 = ref('')
     const config = ref({ value: 'label', label: 'value' })
     const data = ref([
-      { value: 'Go', label: 'go' },
-      { value: 'JavaScript', label: 'javascript' },
-      { value: 'Python', label: 'python' },
-      { value: 'Dart', label: 'dart' },
-      { value: 'V', label: 'v' },
+      { value: '1', label: '一' },
+      { value: '2', label: '二' },
+      { value: '3', label: '三' },
+      { value: '4', label: '四' },
+      { value: '5', label: '五' },
     ])
 
     return {
@@ -106,7 +106,7 @@ export default {
 
 :::
 
-#### 多选
+##### 多选
 
 ::: demo 当 `multiple` 为 `true` 时，启用多选。此时绑定的 model-value 为数组格式
 
@@ -125,11 +125,11 @@ export default {
   setup() {
     const select = ref([])
     const data = ref([
-      { value: 'Go', label: 'go' },
-      { value: 'JavaScript', label: 'javascript' },
-      { value: 'Python', label: 'python' },
-      { value: 'Dart', label: 'dart' },
-      { value: 'V', label: 'v' },
+      { value: '1', label: '一' },
+      { value: '2', label: '二' },
+      { value: '3', label: '三' },
+      { value: '4', label: '四' },
+      { value: '5', label: '五' },
     ])
 
     return {
@@ -142,7 +142,7 @@ export default {
 
 :::
 
-#### 配置
+##### 配置
 
 | 参数                  | 说明                                                               | 类型     | 可选值                | 默认值                                                   |
 | :-------------------- | :----------------------------------------------------------------- | :------- | :-------------------- | :------------------------------------------------------- |
@@ -175,7 +175,7 @@ export default {
 | automatic-dropdown    | 对于不可搜索的 Select，是否在输入框获得焦点后自动弹出选项菜单      | boolean  | -                     | false                                                    |
 | clear-icon            | 自定义清空图标的类名                                               | string   | -                     | el-icon-circle-close                                     |
 
-#### 事件
+##### 事件
 
 | 名称           | 说明                                     | 回调参数                      |
 | -------------- | ---------------------------------------- | ----------------------------- |
