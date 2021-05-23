@@ -21,12 +21,12 @@ npm i element-enhance
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
-import ElementPro from 'element-enhance'
+import ElementEnhance from 'element-enhance'
 import 'element-enhance/lib/style.css'
 
 const app = createApp(App)
 
-app.use(ElementPro)
+app.use(ElementEnhance)
 app.mount('#app')
 ```
 

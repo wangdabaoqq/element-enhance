@@ -113,7 +113,6 @@ function toggleCollapse() {
     background: var(--c-aside-background);
     transition: width var(--t-duration) var(--t-timing-function);
     & .ele-aside-logo {
-      padding-left: 20px;
       height: var(--header-height);
       min-height: var(--header-height);
       overflow: hidden;

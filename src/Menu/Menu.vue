@@ -2,7 +2,7 @@
   <el-menu
     :default-active="route.path"
     class="ele-menu"
-    :class="theme"
+    :class="theme ? theme : ''"
     :background-color="menuBackground"
     :text-color="menuForeground"
     :unique-opened="uniqueOpened"
@@ -40,8 +40,8 @@ import type { IRouteRecordRaw } from '../types/index'
 
 const props = defineProps<{
   routes?: IRouteRecordRaw[]
-  theme: string
-  uniqueOpened: boolean
+  theme?: string
+  uniqueOpened?: boolean
 }>()
 const { theme, uniqueOpened } = toRefs(props)
 const route = useRoute()
@@ -72,6 +72,12 @@ function handleSelect(path: string) {
 }
 .ele-menu.black .el-submenu .el-menu .el-menu-item {
   background-color: #000c17 !important;
+}
+.ele-menu.black .el-submenu .el-menu .el-menu-item:first-child {
+  margin-top: 4px;
+}
+.ele-menu.black .el-submenu .el-menu .el-menu-item:last-child {
+  margin-bottom: 4px;
 }
 .ele-menu.black .el-submenu .el-menu .el-menu-item.is-active {
   background-color: #409eff !important;

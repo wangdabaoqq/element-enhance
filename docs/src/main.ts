@@ -12,7 +12,7 @@ import {
   ElDropdownMenu,
   ElDatePicker,
 } from 'element-plus'
-import ElementPro from '/@src/index'
+import ElementEnhance from '/@src/index'
 import EleCode from './components/EleCode.vue'
 import 'element-plus/lib/theme-chalk/index.css'
 import './styles/index.css'
@@ -38,7 +38,7 @@ export function createApp(): {
     .use(ElDropdownItem)
     .use(ElDropdownMenu)
     .use(ElDatePicker)
-    .use(ElementPro)
+    .use(ElementEnhance)
 
   return { app, router }
 }

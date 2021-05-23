@@ -5,8 +5,14 @@
     :multi-tab="multiTab"
     :unique-opened="uniqueOpened"
   >
-    <template #logo>
+    <template #logo="{ collapse }">
       <img
+        v-if="collapse"
+        class="collapseLogo"
+        src="../assets/logo.png"
+      >
+      <img
+        v-else
         class="logo"
         src="../assets/logo.svg"
       >
@@ -48,7 +54,13 @@ export default {
   height: 30px;
   margin: auto;
   margin-top: 15px;
-  margin-left: 38px;
+  margin-left: 56px;
+}
+.collapseLogo {
+  height: 34px;
+  width: 34px;
+  margin-left: 16px;
+  margin-top: 13px;
 }
 .github {
   height: 30px;

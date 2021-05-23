@@ -39,8 +39,8 @@
 <template>
   <ele-layout 
     class="demo-layout" 
-    multi-tab="true" 
-    breadcrumb="true">
+    multi-tab=true 
+    breadcrumb=true>
     <template #logo></template>
   </ele-layout>
 </template>

@@ -74,10 +74,14 @@ const props = defineProps<{
   breadcrumb?: boolean
 }>()
 
-const { collapse, transition, multiTab, uniqueOpened, breadcrumb } = toRefs(
-  props
-)
-
+const {
+  collapse,
+  transition,
+  multiTab,
+  uniqueOpened,
+  breadcrumb,
+  theme,
+} = toRefs(props)
 const attrs = useAttrs()
 const { slots } = useContext()
 const { show, toggleShow } = useShow(collapse?.value)
