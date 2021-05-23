@@ -1,10 +1,4 @@
-# InputTag
-
-> Enter an array of tags
-
-# Use
-
-## Basic Use
+##### 基础
 
 ::: demo 使用 `ele-input-tag` 支持 type="text" 的大部分配置
 
@@ -31,7 +25,7 @@ export default {
 
 :::
 
-### 通过 `Enter` 键触发
+##### 触发
 
 ::: demo 指定 trigger 为 enter 时，将通过回车键触发输入
 
@@ -59,7 +53,7 @@ export default {
 
 :::
 
-### 尺寸
+##### 尺寸
 
 ::: demo 可通过 size 属性指定输入框和标签的尺寸
 
@@ -101,7 +95,7 @@ export default {
 
 :::
 
-### 带输入建议
+##### 建议
 
 ::: demo 使用 `ele-autocomplete-tag` 支持 autocomplete 的大部分配置
 
@@ -142,58 +136,58 @@ export default {
 
 :::
 
-### InputTag Props
+##### 配置
 
-| Name            | Description                          | Type    | Options                           | Default |
-| :-------------- | :----------------------------------- | :------ | :-------------------------------- | :------ |
-| v-model         | binding value                        | array   | -                                 | -       |
-| trigger         | the key to trigger input tag         | string  | space / enter                     | space   |
-| size            | component size                       | string  | medium / small / mini             | -       |
-| type            | tag Type                             | string  | success / info / warning / danger | -       |
-| hit             | whether Tag has a highlighted border | boolean | -                                 | false   |
-| color           | background color of the Tag          | string  | -                                 | -       |
-| effect          | component theme of the Tag           | string  | dark / light / plain              | light   |
-| maxlength       | maximum Input text length            | number  | -                                 | -       |
-| minlength       | minimum Input text length            | number  | -                                 | -       |
-| show-word-limit | whether show word count              | boolean | -                                 | false   |
-| placeholder     | placeholder of Input                 | string  | -                                 | -       |
-| clearable       | whether to show clear button         | boolean | -                                 | false   |
-| disabled        | whether disabled                     | boolean | -                                 | false   |
-| prefix-icon     | prefix icon class                    | string  | -                                 | -       |
-| suffix-icon     | suffix icon class                    | string  | -                                 | -       |
-| autocomplete    | same as autocomplete in native input | string  | on / off                          | off     |
-| name            | same as name in native input         | string  | -                                 | -       |
-| readonly        | same as readonly in native input     | boolean | -                                 | false   |
-| autofocus       | same as autofocus in native input    | boolean | -                                 | false   |
-| form            | same as form in native input         | string  | -                                 | -       |
-| label           | label text                           | string  | -                                 | -       |
-| tabindex        | input tabindex                       | string  | -                                 | -       |
-| validate-event  | whether to trigger form validation   | boolean | -                                 | true    |
+| 参数            | 说明                     | 类型    | 可选值                            | 默认值 |
+| :-------------- | :----------------------- | :------ | :-------------------------------- | :----- |
+| v-model         | 绑定值                   | array   | -                                 | -      |
+| trigger         | 触发输入按键             | string  | space / enter                     | space  |
+| size            | 尺寸                     | string  | medium / small / mini             | -      |
+| type            | tag 类型                 | string  | success / info / warning / danger | -      |
+| hit             | tag 是否有边框描边       | boolean | -                                 | false  |
+| color           | tag 背景色               | string  | -                                 | -      |
+| effect          | tag 主题                 | string  | dark / light / plain              | light  |
+| maxlength       | 原生属性，最大输入长度   | number  | -                                 | -      |
+| minlength       | 原生属性，最小输入长度   | number  | -                                 | -      |
+| show-word-limit | 是否显示输入字数统计     | boolean | -                                 | false  |
+| placeholder     | 输入框占位文本           | string  | -                                 | -      |
+| clearable       | 是否可清空               | boolean | -                                 | false  |
+| disabled        | 禁用                     | boolean | -                                 | false  |
+| prefix-icon     | 输入框头部图标           | string  | -                                 | -      |
+| suffix-icon     | 输入框尾部图标           | string  | -                                 | -      |
+| autocomplete    | 原生属性，自动补全       | string  | on / off                          | off    |
+| name            | 原生属性                 | string  | -                                 | -      |
+| readonly        | 原生属性，是否只读       | boolean | -                                 | false  |
+| autofocus       | 原生属性，自动获取焦点   | boolean | -                                 | false  |
+| form            | 原生属性                 | string  | -                                 | -      |
+| label           | 输入框关联的 label 文字  | string  | -                                 | -      |
+| tabindex        | 输入框的 tabindex        | string  | -                                 | -      |
+| validate-event  | 输入时是否触发表单的校验 | boolean | -                                 | true   |
 
-### AutocompleteTag Props
+##### 配置
 
-| Name                  | Description                                                                                                                | Type                            | Options                                                        | Default      |
-| :-------------------- | :------------------------------------------------------------------------------------------------------------------------- | :------------------------------ | :------------------------------------------------------------- | :----------- |
-| v-model               | binding value                                                                                                              | array                           | -                                                              | -            |
-| trigger               | the key to trigger input tag                                                                                               | string                          | space / enter                                                  | space        |
-| size                  | component size                                                                                                             | string                          | medium / small / mini                                          | -            |
-| type                  | tag Type                                                                                                                   | string                          | success / info / warning / danger                              | -            |
-| hit                   | whether Tag has a highlighted border                                                                                       | boolean                         | -                                                              | false        |
-| color                 | background color of the Tag                                                                                                | string                          | -                                                              | -            |
-| effect                | component theme of the Tag                                                                                                 | string                          | dark / light / plain                                           | light        |
-| placeholder           | placeholder of Input                                                                                                       | string                          | -                                                              | -            |
-| disabled              | whether disabled                                                                                                           | boolean                         | -                                                              | false        |
-| value-key             | key name of the input suggestion object for display                                                                        | string                          | -                                                              | value        |
-| debounce              | debounce delay when typing, in milliseconds                                                                                | number                          | -                                                              | 300          |
-| placement             | placement of the popup menu                                                                                                | string                          | top / top-start / top-end / bottom / bottom-start / bottom-end | bottom-start |
-| fetch-suggestions     | a method to fetch input suggestions. When suggestions are ready, invoke callback(data:[]) to return them to Autocomplete   | Function(queryString, callback) | -                                                              | -            |
-| popper-class          | custom class name for autocomplete's dropdown                                                                              | string                          | -                                                              | -            |
-| trigger-on-focus      | whether show suggestions when input focus                                                                                  | boolean                         | -                                                              | true         |
-| name                  | same as name in native input                                                                                               | string                          | -                                                              | -            |
-| select-when-unmatched | whether to emit a select event on enter when there is no autocomplete match                                                | boolean                         | -                                                              | false        |
-| label                 | label text                                                                                                                 | string                          | -                                                              | -            |
-| prefix-icon           | prefix icon class                                                                                                          | string                          | -                                                              | -            |
-| suffix-icon           | suffix icon class                                                                                                          | string                          | -                                                              | -            |
-| hide-loading          | whether to hide the loading icon in remote search                                                                          | boolean                         | -                                                              | false        |
-| popper-append-to-body | whether to append the dropdown to body. If the positioning of the dropdown is wrong, you can try to set this prop to false | boolean                         | -                                                              | false        |
-| highlight-first-item  | whether to highlight first item in remote search suggestions by default                                                    | boolean                         | -                                                              | false        |
+| 参数                  | 说明                                   | 类型                            | 可选值                                                         | 默认值       |
+| :-------------------- | :------------------------------------- | :------------------------------ | :------------------------------------------------------------- | :----------- |
+| v-model               | 绑定值                                 | array                           | -                                                              | -            |
+| trigger               | 触发输入按键                           | string                          | space / enter                                                  | space        |
+| size                  | 尺寸                                   | string                          | medium / small / mini                                          | -            |
+| type                  | tag 类型                               | string                          | success / info / warning / danger                              | -            |
+| hit                   | tag 是否有边框描边                     | boolean                         | -                                                              | false        |
+| color                 | tag 背景色                             | string                          | -                                                              | -            |
+| effect                | tag 主题                               | string                          | dark / light / plain                                           | light        |
+| placeholder           | 输入框占位文本                         | string                          | -                                                              | -            |
+| disabled              | 禁用                                   | boolean                         | -                                                              | false        |
+| value-key             | 输入建议对象中用于显示的键名           | string                          | -                                                              | value        |
+| debounce              | 获取输入建议的去抖延时                 | number                          | -                                                              | 300          |
+| placement             | 菜单弹出位置                           | string                          | top / top-start / top-end / bottom / bottom-start / bottom-end | bottom-start |
+| fetch-suggestions     | 返回输入建议的方法                     | Function(queryString, callback) | -                                                              | -            |
+| popper-class          | Autocomplete 下拉列表的类名            | string                          | -                                                              | -            |
+| trigger-on-focus      | 是否在输入框 focus 时显示建议列表      | boolean                         | -                                                              | true         |
+| name                  | 原生属性                               | string                          | -                                                              | -            |
+| select-when-unmatched | 按下回车是否触发 `select` 事件         | boolean                         | -                                                              | false        |
+| label                 | 输入框关联的 label 文字                | string                          | -                                                              | -            |
+| prefix-icon           | 输入框头部图标                         | string                          | -                                                              | -            |
+| suffix-icon           | 输入框尾部图标                         | string                          | -                                                              | -            |
+| hide-loading          | 是否隐藏远程加载时的加载图标           | boolean                         | -                                                              | false        |
+| popper-append-to-body | 是否将下拉列表插入至 body 元素         | boolean                         | -                                                              | false        |
+| highlight-first-item  | 是否默认突出显示远程搜索建议中的第一项 | boolean                         | -                                                              | false        |

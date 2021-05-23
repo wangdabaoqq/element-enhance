@@ -1,0 +1,1 @@
+import{o as e,c as l,b as n}from"./vendor.83dd0d9e.js";const s={class:"markdown-body"},a=n("h5",null,"安装",-1),d=n("div",{class:"language-"},[n("pre",null,[n("code",null,"npm install element-enhance --save\n")])],-1),o={expose:[],setup:n=>(n,o)=>(e(),l("div",s,[a,d]))};export default o;

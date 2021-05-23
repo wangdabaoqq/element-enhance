@@ -1,10 +1,4 @@
-# Select
-
-> When there are plenty of options, use a drop-down menu to display and select desired ones
-
-# Use
-
-## Basic Use
+##### 基础
 
 ::: demo 传入 data 数据，自动生成选项
 
@@ -22,11 +16,11 @@ export default {
   setup() {
     const select = ref('')
     const data = ref([
-      { value: 'Go', label: 'go' },
-      { value: 'JavaScript', label: 'javascript' },
-      { value: 'Python', label: 'python' },
-      { value: 'Dart', label: 'dart' },
-      { value: 'V', label: 'v' },
+      { value: '1', label: '一' },
+      { value: '2', label: '二' },
+      { value: '3', label: '三' },
+      { value: '4', label: '四' },
+      { value: '5', label: '五' },
     ])
 
     return {
@@ -39,7 +33,7 @@ export default {
 
 :::
 
-### 控制不可选项目
+##### 可选
 
 ::: demo 将传入 data 数据中的某项设置为 `disabled: true` 即可
 
@@ -57,11 +51,11 @@ export default {
   setup() {
     const select1 = ref('')
     const list = ref([
-      { value: 'Go', label: 'go', disabled: true },
-      { value: 'JavaScript', label: 'javascript' },
-      { value: 'Python', label: 'python' },
-      { value: 'Dart', label: 'dart' },
-      { value: 'V', label: 'v' },
+      { value: '1', label: '一' },
+      { value: '2', label: '二' },
+      { value: '3', label: '三' },
+      { value: '4', label: '四' },
+      { value: '5', label: '五' },
     ])
 
     return {
@@ -74,7 +68,7 @@ export default {
 
 :::
 
-### 配置绑定数据键值
+##### 字段
 
 ::: demo 通过 config 配置数据键值。`value`- v-model 绑定的键值、`label`-显示键值、`disabled`-控制不可选的键值
 
@@ -94,11 +88,11 @@ export default {
     const select2 = ref('')
     const config = ref({ value: 'label', label: 'value' })
     const data = ref([
-      { value: 'Go', label: 'go' },
-      { value: 'JavaScript', label: 'javascript' },
-      { value: 'Python', label: 'python' },
-      { value: 'Dart', label: 'dart' },
-      { value: 'V', label: 'v' },
+      { value: '1', label: '一' },
+      { value: '2', label: '二' },
+      { value: '3', label: '三' },
+      { value: '4', label: '四' },
+      { value: '5', label: '五' },
     ])
 
     return {
@@ -112,7 +106,7 @@ export default {
 
 :::
 
-### 开启多选
+##### 多选
 
 ::: demo 当 `multiple` 为 `true` 时，启用多选。此时绑定的 model-value 为数组格式
 
@@ -131,11 +125,11 @@ export default {
   setup() {
     const select = ref([])
     const data = ref([
-      { value: 'Go', label: 'go' },
-      { value: 'JavaScript', label: 'javascript' },
-      { value: 'Python', label: 'python' },
-      { value: 'Dart', label: 'dart' },
-      { value: 'V', label: 'v' },
+      { value: '1', label: '一' },
+      { value: '2', label: '二' },
+      { value: '3', label: '三' },
+      { value: '4', label: '四' },
+      { value: '5', label: '五' },
     ])
 
     return {
@@ -148,46 +142,46 @@ export default {
 
 :::
 
-### Props
+##### 配置
 
-| Name                  | Description                                                                                                                 | Type     | Options               | Default                                                  |
-| :-------------------- | :-------------------------------------------------------------------------------------------------------------------------- | :------- | :-------------------- | :------------------------------------------------------- |
-| v-model               | binding value                                                                                                               | array    | -                     | -                                                        |
-| data                  | binding data                                                                                                                | array    | -                     | -                                                        |
-| config                | config the key of data                                                                                                      | object   | -                     | { value: 'value', label: 'label', disabled: 'disabled' } |
-| multiple              | whether multiple-select is activated                                                                                        | boolean  | -                     | false                                                    |
-| disabled              | whether disabled                                                                                                            | boolean  | -                     | false                                                    |
-| size                  | component size                                                                                                              | string   | medium / small / mini | -                                                        |
-| clearable             | whether clearable                                                                                                           | boolean  | -                     | false                                                    |
-| collapse-tags         | whether to collapse tags to a text when multiple selecting                                                                  | boolean  | -                     | false                                                    |
-| multiple-limit        | maximum number of options user can select when multiple is true. No limit when set to 0                                     | number   | -                     | 0                                                        |
-| name                  | the name attribute of select input                                                                                          | string   | -                     | -                                                        |
-| autocomplete          | the autocomplete attribute of select input                                                                                  | string   | -                     | off                                                      |
-| auto-complete         | the autocomplete attribute of select input                                                                                  | string   | -                     | off                                                      |
-| placeholder           | placeholder                                                                                                                 | string   | -                     | Select                                                   |
-| filterable            | whether Select is filterable                                                                                                | boolean  | -                     | false                                                    |
-| allow-create          | whether creating new items is allowed. To use this, `filterable` must be true                                               | boolean  | -                     | false                                                    |
-| filter-method         | custom filter method                                                                                                        | function | -                     | -                                                        |
-| remote                | whether options are loaded from server                                                                                      | boolean  | -                     | false                                                    |
-| remote-method         | custom remote search method                                                                                                 | function | -                     | -                                                        |
-| loading               | whether Select is loading data from server                                                                                  | boolean  | -                     | false                                                    |
-| loading-text          | displayed text while loading data from server                                                                               | string   | -                     | Loading                                                  |
-| no-match-text         | displayed text when no data matches the filtering query, you can also use slot `empty`                                      | string   | -                     | No matching data                                         |
-| no-data-text          | displayed text when there is no options, you can also use slot empty                                                        | string   | -                     | No data                                                  |
-| popper-class          | custom class name for Select's dropdown                                                                                     | string   | -                     | -                                                        |
-| reserve-keyword       | when `multiple` and `filter` is true, whether to reserve current keyword after selecting an option                          | boolean  | -                     | false                                                    |
-| default-first-option  | select first matching option on enter key. Use with `filterable` or `remote`                                                | boolean  | -                     | false                                                    |
-| popper-append-to-body | whether to append the popper menu to body. If the positioning of the popper is wrong, you can try to set this prop to false | boolean  | -                     | false                                                    |
-| automatic-dropdown    | for non-filterable Select, this prop decides if the option menu pops up when the input is focused                           | boolean  | -                     | false                                                    |
-| clear-icon            | Custom clear icon class                                                                                                     | string   | -                     | el-icon-circle-close                                     |
+| 参数                  | 说明                                                               | 类型     | 可选值                | 默认值                                                   |
+| :-------------------- | :----------------------------------------------------------------- | :------- | :-------------------- | :------------------------------------------------------- |
+| v-model               | 绑定值                                                             | array    | -                     | -                                                        |
+| data                  | 绑定数据                                                           | array    | -                     | -                                                        |
+| config                | 配置绑定数据键值                                                   | object   | -                     | { value: 'value', label: 'label', disabled: 'disabled' } |
+| multiple              | 是否多选                                                           | boolean  | -                     | false                                                    |
+| disabled              | 是否禁用                                                           | boolean  | -                     | false                                                    |
+| size                  | 尺寸                                                               | string   | medium / small / mini | -                                                        |
+| clearable             | 是否可以清空选项                                                   | boolean  | -                     | false                                                    |
+| collapse-tags         | 多选时是否将选中值按文字的形式展示                                 | boolean  | -                     | false                                                    |
+| multiple-limit        | 多选时用户最多可以选择的项目数，为 0 则不限制                      | number   | -                     | 0                                                        |
+| name                  | select input 的 name 属性                                          | string   | -                     | -                                                        |
+| autocomplete          | select input 的 autocomplete 属性                                  | string   | -                     | off                                                      |
+| auto-complete         | 下个主版本弃用                                                     | string   | -                     | off                                                      |
+| placeholder           | 占位符                                                             | string   | -                     | 请选择                                                   |
+| filterable            | 是否可搜索                                                         | boolean  | -                     | false                                                    |
+| allow-create          | 是否允许用户创建新条目，需配合 filterable 使用                     | boolean  | -                     | false                                                    |
+| filter-method         | 自定义搜索方法                                                     | function | -                     | -                                                        |
+| remote                | 是否为远程搜索                                                     | boolean  | -                     | false                                                    |
+| remote-method         | 远程搜索方法                                                       | function | -                     | -                                                        |
+| loading               | 是否正在从远程获取数据                                             | boolean  | -                     | false                                                    |
+| loading-text          | 远程加载时显示的文字                                               | string   | -                     | 加载中                                                   |
+| no-match-text         | 搜索条件无匹配时显示的文字，也可以使用#empty 设置                  | string   | -                     | 无匹配数据                                               |
+| no-data-text          | 选项为空时显示的文字，也可以使用#empty 设置                        | string   | -                     | 无数据                                                   |
+| popper-class          | Select 下拉框的类名                                                | string   | -                     | -                                                        |
+| reserve-keyword       | 多选且可搜索时，是否在选中一个选项后保留当前的搜索关键词           | boolean  | -                     | false                                                    |
+| default-first-option  | 在输入框按下回车，选择第一个匹配项。配合 filterable 或 remote 使用 | boolean  | -                     | false                                                    |
+| popper-append-to-body | 是否将弹出框插入至 body 元素                                       | boolean  | -                     | false                                                    |
+| automatic-dropdown    | 对于不可搜索的 Select，是否在输入框获得焦点后自动弹出选项菜单      | boolean  | -                     | false                                                    |
+| clear-icon            | 自定义清空图标的类名                                               | string   | -                     | el-icon-circle-close                                     |
 
-### Select Events
+##### 事件
 
-| Name           | Description                                                   | Parameters                                |
-| -------------- | ------------------------------------------------------------- | ----------------------------------------- |
-| change         | triggers when the selected value changes                      | current selected value                    |
-| visible-change | triggers when the dropdown appears/disappears                 | true when it appears, and false otherwise |
-| remove-tag     | triggers when a tag is removed in multiple mode               | removed tag value                         |
-| clear          | triggers when the clear icon is clicked in a clearable Select | —                                         |
-| blur           | triggers when Input blurs                                     | (event: Event)                            |
-| focus          | triggers when Input focuses                                   | (event: Event)                            |
+| 名称           | 说明                                     | 回调参数                      |
+| -------------- | ---------------------------------------- | ----------------------------- |
+| change         | 选中值发生变化时触发                     | 目前的选中值                  |
+| visible-change | 下拉框出现/隐藏时触发                    | 出现则为 true，隐藏则为 false |
+| remove-tag     | 多选模式下移除 tag 时触发                | 移除的 tag 值                 |
+| clear          | 可清空的单选模式下用户点击清空按钮时触发 | —                             |
+| blur           | 当 input 失去焦点时触发                  | (event: Event)                |
+| focus          | 当 input 获得焦点时触发                  | (event: Event)                |

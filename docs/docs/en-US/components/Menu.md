@@ -1,57 +1,57 @@
-# Menu
+##### 基础
 
-> Menu that provides navigation for your website
-
-# Use
-
-## Basic Use
-
-::: demo 组件默认将从 `vue-router` 中获取路由生成路由，格式参考页面下方
+::: demo 组件默认将从 `vue-router` 中获取路由生成路由，[格式参考](./Layout#参考)
 
 <template>
-  <ele-menu />
+  <ele-menu class="demo-menu"/>
 </template>
+
+<style>
+.demo-menu {
+  width: 240px;
+}
+</style>
 
 :::
 
-### 模式
+##### 主题
+
+::: demo 组件默认将从 `vue-router` 中获取路由生成路由，[格式参考](./Layout#参考)
+
+<template>
+  <ele-menu class="demo-menu" theme="black"/>
+</template>
+
+<style>
+.demo-menu {
+  width: 240px;
+}
+</style>
+
+:::
+
+##### 模式
 
 ::: demo 通过传入 `mode` 实现自定义菜单模式
 
 <template>
-  <ele-radio-button
-    v-model="mode"
-    :data="data"
-  />
-  <ele-menu :mode="mode" />
+  <ele-menu mode="horizontal"/>
 </template>
 
-<script>
-import { ref } from 'vue'
-
-export default {
-  setup() {
-    const mode = ref('horizontal')
-    const data = [
-      { value: 'vertical', label: '垂直' },
-      { value: 'horizontal', label: '水平' },
-    ]
-
-    return {
-      mode,
-    }
-  }
+<style>
+.demo-menu {
+  width: 240px;
 }
-</script>
+</style>
 
 :::
 
-### 自定义路由
+##### 路由
 
 ::: demo 通过传入 `routes` 实现自定义路由显示
 
 <template>
-  <ele-menu :routes="routes" />
+  <ele-menu :routes="routes"  class="demo-menu"/>
 </template>
 
 <script>
@@ -73,25 +73,31 @@ export default {
 }
 </script>
 
+<style>
+.demo-menu {
+  width: 240px;
+}
+</style>
+
 :::
 
-### Props
+##### 配置
 
-| Name                | Description                                                         | Type    | Options               | Default           |
-| :------------------ | :------------------------------------------------------------------ | :------ | :-------------------- | :---------------- |
-| routes              | current routes                                                      | array   | -                     | from `vue-router` |
-| mode                | menu display mode                                                   | string  | horizontal / vertical | vertical          |
-| collapse            | whether the menu is collapsed (available only in vertical mode)     | boolean | -                     | false             |
-| background-color    | background color of Menu (hex format)                               | string  | -                     | #ffffff           |
-| text-color          | text color of Menu (hex format)                                     | string  | -                     | #303133           |
-| active-text-color   | text color of currently active menu item (hex format)               | string  | -                     | #409EFF           |
-| default-openeds     | array that contains indexes of currently active sub-menus           | Array   | -                     | -                 |
-| unique-opened       | whether only one sub-menu can be active                             | boolean | -                     | false             |
-| menu-trigger        | how sub-menus are triggered, only works when `mode` is 'horizontal' | string  | hover / click         | hover             |
-| collapse-transition | whether to enable the collapse transition                           | boolean | -                     | true              |
+| 参数                | 说明                                                 | 类型    | 可选值                | 默认值                 |
+| :------------------ | :--------------------------------------------------- | :------ | :-------------------- | :--------------------- |
+| routes              | 当前程序路由                                         | array   | -                     | 从 `vue-router` 中获取 |
+| mode                | 模式                                                 | string  | horizontal / vertical | vertical               |
+| collapse            | 是否水平折叠收起菜单（仅在 mode 为 vertical 时可用） | boolean | -                     | false                  |
+| background-color    | 菜单的背景色（仅支持 hex 格式）                      | string  | -                     | #ffffff                |
+| text-color          | 菜单的文字颜色（仅支持 hex 格式）                    | string  | -                     | #303133                |
+| active-text-color   | 当前激活菜单的文字颜色（仅支持 hex 格式）            | string  | -                     | #409EFF                |
+| default-openeds     | 当前打开的 sub-menu 的 index 的数组                  | Array   | -                     | -                      |
+| unique-opened       | 是否只保持一个子菜单的展开                           | boolean | -                     | false                  |
+| menu-trigger        | 子菜单打开的触发方式(只在 mode 为 horizontal 时有效) | string  | hover / click         | hover                  |
+| collapse-transition | 是否开启折叠动画                                     | boolean | -                     | true                   |
 
-### Slots
+##### 插槽
 
-| Name | Description                                                       |
-| :--- | :---------------------------------------------------------------- |
-| -    | Control menu display content, parameters { meta, path, redirect } |
+| name | 说明                                                 |
+| :--- | :--------------------------------------------------- |
+| -    | 控制菜单显示内容，参数为 { meta, path, redirect } 等 |
