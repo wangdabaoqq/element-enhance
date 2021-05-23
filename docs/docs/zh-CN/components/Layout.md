@@ -9,7 +9,7 @@
 <style>
 .demo-layout {
   border: 1px solid whitesmoke;
-  height: 460px;
+  height: 400px;
 }
 </style>
 
