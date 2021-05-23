@@ -73,6 +73,7 @@ const size = useScreenSize()
 const menuCollapse = computed(() => {
   return size.value === 'xs' ? false : collapse.value
 })
+
 function toggleCollapse() {
   emit('toggle-collapse')
 }
