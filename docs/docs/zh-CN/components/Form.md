@@ -1,4 +1,4 @@
-#### 基础
+##### 基础
 
 ::: demo 传入 columns 数据，自动生成表单。操作按钮需要通过 menu 插槽传入
 
@@ -19,12 +19,12 @@ export default {
     const form = ref({})
     const columns = ref([
       {
-        label: '名字',
+        label: '账户',
         prop: 'name',
         component: 'el-input',
       },
       {
-        label: '地址',
+        label: '密码',
         prop: 'address',
         component: 'el-input',
       },
@@ -47,7 +47,7 @@ export default {
 
 :::
 
-#### 组件
+##### 组件
 
 ::: demo 通过 columns 的 `component` 定义该项生成什么组件，通过 `props` 可以向组件中传值。要求对应组件可以通过 v-model 绑定值
 
@@ -66,15 +66,13 @@ export default {
   setup() {
     const form1 = ref({})
     const list = ref([
-      { value: 'Go', label: 'go' },
-      { value: 'JavaScript', label: 'javascript' },
-      { value: 'Python', label: 'python' },
-      { value: 'Dart', label: 'dart' },
-      { value: 'V', label: 'v' },
+      { value: '0', label: '学习' },
+      { value: '1', label: '运动' },
+      { value: '2', label: '唱歌' },
     ])
     const columns1 = ref([
       {
-        label: 'input',
+        label: '输入',
         prop: 'input',
         component: 'el-input',
         props: {
@@ -83,7 +81,7 @@ export default {
         },
       },
       {
-        label: 'input-tag',
+        label: '标签',
         prop: 'inputTag',
         component: 'ele-input-tag',
         props: {
@@ -91,7 +89,7 @@ export default {
         },
       },
       {
-        label: 'radio',
+        label: '单选',
         prop: 'radio',
         component: 'ele-radio',
         props: {
@@ -99,7 +97,7 @@ export default {
         },
       },
       {
-        label: 'checkbox',
+        label: '复选',
         prop: 'checkbox',
         component: 'ele-checkbox',
         props: {
@@ -107,7 +105,7 @@ export default {
         },
       },
       {
-        label: 'select',
+        label: '下拉',
         prop: 'select',
         component: 'ele-select',
         props: {
@@ -126,7 +124,7 @@ export default {
 
 :::
 
-#### 插槽
+##### 插槽
 
 ::: demo 通过 columns 的 slot 配置是否开启自定义插槽功能。虽然在启用插槽后可以通过 `v-model="form.slot"` 这种方式绑定值，但更推荐使用 `value` 与 `setValue`
 
@@ -137,7 +135,6 @@ export default {
     label-width="100px"
   >
     <template #slot-label>
-      <i class="el-icon-picture-outline" />
       <span>图片</span>
     </template>
     <template #slot="{ value, setValue }">
@@ -175,7 +172,6 @@ export default {
     ])
 
     function beforeUpload(file, setValue) {
-      // 模拟上传图片
       const fileReader = new FileReader()
       fileReader.onloadend = e => setValue(e.target.result)
       fileReader.readAsDataURL(file)
@@ -217,7 +213,7 @@ export default {
 
 :::
 
-#### 按钮
+##### 按钮
 
 ::: demo 通过 menu 配置按钮
 
@@ -237,17 +233,17 @@ export default {
   setup() {
     const menu = {
       submitText: '提交',
-      reset: false,
+      resetText: '重置'
     }
     const form = ref({})
     const columns = ref([
       {
-        label: '名字',
+        label: '账户',
         prop: 'name',
         component: 'el-input',
       },
       {
-        label: '地址',
+        label: '密码',
         prop: 'address',
         component: 'el-input',
       },
@@ -264,7 +260,7 @@ export default {
 
 :::
 
-#### 套娃
+##### 套娃
 
 ::: demo 通过 columns 的 `children` 配置子表单，当然你也可以配置多层的 `children` 结构实现反复套娃
 
@@ -284,7 +280,7 @@ export default {
     const form3 = ref({})
     const columns3 = ref([
       {
-        label: '商品名',
+        label: '商品',
         prop: 'name',
         component: 'el-input',
       },
@@ -335,7 +331,7 @@ export default {
 
 :::
 
-#### 验证
+##### 验证
 
 ::: demo 像 el-form 一样可以通过 `rules` 配置表单验证。对于子表单更推荐使用 columns 里面的 `rules` 字段实现验证。否则你需要通过 `${父级的 prop}.${当前项的 index}.${当前的 prop}` 这种方式配置子表单的验证
 
@@ -412,7 +408,7 @@ export default {
 
 :::
 
-#### 动态
+##### 动态
 
 ::: demo 如果传入的 `columns` 是一个响应性数据，动态的修改 columns 表单也会随之改变。由此你可以根据需要动态的控制表单的内容，或者实现从后台加载数据实现表单
 
@@ -488,7 +484,7 @@ export default {
 
 :::
 
-#### 布局
+##### 布局
 
 ::: demo 与使用 `el-row` 和 `el-col` 组件相同 (`el-row` 对应 `ele-form`；`el-col` 对应 `columns`)，通过相关配置可以自由地组合布局。**当 `inline` 为 `true` 时无效**
 
@@ -583,7 +579,7 @@ export default {
 
 :::
 
-#### 配置
+##### 配置
 
 | 参数                    | 说明                                                                    | 类型    | 可选值                                              | 默认值 |
 | :---------------------- | :---------------------------------------------------------------------- | :------ | :-------------------------------------------------- | :----- |
@@ -607,7 +603,7 @@ export default {
 | justify                 | flex 布局下的水平排列方式                                               | string  | start / end / center / space-around / space-between | start  |
 | align                   | flex 布局下的垂直排列方式                                               | string  | top / middle / bottom                               | top    |
 
-#### 参数
+##### 参数
 
 | 参数          | 说明                                                                      | 类型            | 可选值                | 默认值 |
 | :------------ | :------------------------------------------------------------------------ | :-------------- | :-------------------- | :----- |
@@ -649,7 +645,7 @@ props: {
 
 :::
 
-#### 参数 (可通过全局配置配置)
+##### 参数 (可通过全局配置配置)
 
 | 参数        | 说明                              | 类型    | 可选值 | 默认值              |
 | :---------- | :-------------------------------- | :------ | :----- | :------------------ |
@@ -660,7 +656,7 @@ props: {
 | resetText   | 是否显示 reset 按钮显示的文字     | string  | -      | Reset               |
 | resetProps  | reset 按钮的配置，参考 el-button  | object  | -      | -                   |
 
-#### 事件
+##### 事件
 
 | 事件名   | 说明                   | 参数                                           |
 | -------- | ---------------------- | ---------------------------------------------- |
@@ -668,7 +664,7 @@ props: {
 | reset    | reset 按钮被点击后触发 | -                                              |
 | validate | 任一表单项被校验后触发 | 被校验的表单项 prop 值, isValid, invalidFields |
 
-#### 方法
+##### 方法
 
 | 方法名        | 说明                                                                                                                                                                 | 参数                                                                       |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
@@ -713,7 +709,7 @@ export default defineComponent({
 
 :::
 
-#### 插槽
+##### 插槽
 
 | name         | 说明                                                           |
 | :----------- | :------------------------------------------------------------- |
