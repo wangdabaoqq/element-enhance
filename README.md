@@ -23,7 +23,7 @@ createApp(App).use(ElementEnhance).mount('#app')
 
 ```vue
 <template>
-  <ele-layout multi-tab="true" breadcrumb="true">
+  <ele-layout theme="black" multi-tab="true" breadcrumb="true">
     <template #logo></template>
   </ele-layout>
 </template>
