@@ -2,7 +2,7 @@
 
 > a component library for vue-next base on element-plus
 
-[DOCUMENT](https://gitee.com/Jmysy/element-enhance) | [CHANGELOG](./CHANGELOG.md)
+[DOCUMENT](https://jmysy.github.io/element-enhance/) | [CHANGELOG](./CHANGELOG.md)
 
 ### Install
 
