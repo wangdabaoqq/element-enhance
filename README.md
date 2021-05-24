@@ -1,16 +1,16 @@
 ## Element - Enhance
 
-> a component library for vue-next base on element-plus
+> A component library for vue-next base on element-plus
 
-[DOCUMENT](https://jmysy.github.io/element-enhance/) | [CHANGELOG](./CHANGELOG.md)
+[在线文档](https://jmysy.github.io/element-enhance/) | [更新日志](./CHANGELOG.md)
 
-### Install
+### 安装
 
 ```sh
 npm i element-enhance
 ```
 
-### Use
+### 引入
 
 ```js
 import { createApp } from 'vue'
@@ -21,6 +21,8 @@ import 'element-enhance/lib/style.css'
 createApp(App).use(ElementEnhance).mount('#app')
 ```
 
+### 使用
+
 ```vue
 <template>
   <ele-layout theme="black" multi-tab="true" breadcrumb="true">
@@ -28,10 +30,11 @@ createApp(App).use(ElementEnhance).mount('#app')
   </ele-layout>
 </template>
 ```
-### Star
+
+### 趋势
 
 [![Giteye chart](https://chart.giteye.net/gitee/Jmysy/element-enhance/9X8CXNEY.png)](https://giteye.net/chart/9X8CXNEY)
 
-### Contribution
+### 贡献
 
 [![Giteye chart](https://chart.giteye.net/gitee/Jmysy/element-enhance/57W94KFG.png)](https://giteye.net/chart/57W94KFG)
