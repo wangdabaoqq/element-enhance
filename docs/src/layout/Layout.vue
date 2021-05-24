@@ -19,6 +19,11 @@
     </template>
     <template #header-right>
       <a
+        class="admin"
+        target="_black"
+        href="https://github.com/Jmysy/element-enhance-admin"
+      >Admin</a>
+      <a
         target="_black"
         href="https://github.com/Jmysy/element-enhance"
       >
@@ -62,6 +67,10 @@ export default {
   margin-left: 16px;
   margin-top: 13px;
 }
+.admin {
+  margin-right: 20px;
+}
+
 .github {
   height: 30px;
   width: 30px;
