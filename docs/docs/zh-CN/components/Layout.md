@@ -17,10 +17,10 @@
 
 ##### 主题
 
-::: Layout 提供 `theme` 属性配置侧边主题
+::: demo 提供 theme 属性配置主题
 
 <template>
-  <ele-layout theme="black" class="demo-layout" />
+  <ele-layout class="demo-layout" theme="black" />
 </template>
 
 <style>

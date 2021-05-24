@@ -5,8 +5,7 @@
 <template>
   <ele-input-tag
     v-model="inputTags"
-    placeholder="请输入内容后点击空格按键"
-  />
+    placeholder="请输入内容后点击空格按键"/>
 </template>
 
 <script>
