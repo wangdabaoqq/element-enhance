@@ -14,7 +14,6 @@
           class="ele-icon ele-icon-toggle-left"
         />
       </span>
-      <ele-layout-breadcrumb v-if="breadcrumb" />
       <slot name="left" />
     </div>
     <div class="header-slot">
@@ -24,11 +23,9 @@
 </template>
 
 <script setup lang="ts">
-import EleLayoutBreadcrumb from './LayoutBreadcrumb.vue'
 import { computed, defineEmit, defineProps, toRefs } from 'vue'
 
 const props = defineProps<{
-  breadcrumb?: boolean
   collapse?: boolean
 }>()
 

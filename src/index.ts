@@ -9,6 +9,7 @@ import { objectDeepMerge } from './utils/index'
 import { config } from './utils/config'
 
 import EleAutocompleteTag from './AutocompleteTag/index'
+import EleBreadcrumb from './Breadcrumb/index'
 import EleCheckbox from './Checkbox/index'
 import EleCheckboxButton from './CheckboxButton/index'
 import EleColumnSetting from './ColumnSetting/index'
@@ -21,9 +22,11 @@ import EleRadio from './Radio/index'
 import EleRadioButton from './RadioButton/index'
 import EleSelect from './Select/index'
 import EleTable from './Table/index'
+import EleTabs from './Tabs/index'
 
 const components: Record<string, IDefineComponent> = {
   EleAutocompleteTag,
+  EleBreadcrumb,
   EleCheckbox,
   EleCheckboxButton,
   EleColumnSetting,
@@ -36,6 +39,7 @@ const components: Record<string, IDefineComponent> = {
   EleRadioButton,
   EleSelect,
   EleTable,
+  EleTabs,
 }
 
 const install = (app: App, options?: InstallOptions): void => {
@@ -53,6 +57,7 @@ const install = (app: App, options?: InstallOptions): void => {
 
 export {
   EleAutocompleteTag,
+  EleBreadcrumb,
   EleCheckbox,
   EleCheckboxButton,
   EleColumnSetting,
@@ -65,6 +70,7 @@ export {
   EleRadioButton,
   EleSelect,
   EleTable,
+  EleTabs,
   install,
 }
 

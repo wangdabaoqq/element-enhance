@@ -1,8 +1,6 @@
 <template>
   <ele-layout
     :theme="theme"
-    :breadcrumb="breadcrumb"
-    :multi-tab="multiTab"
     :unique-opened="uniqueOpened"
   >
     <template #logo="{ collapse }">
@@ -40,14 +38,10 @@ import { ref } from '@vue/runtime-core'
 export default {
   setup() {
     const theme = ref('black')
-    const multiTab = ref(true)
-    const breadcrumb = ref(true)
     const uniqueOpened = ref(true)
 
     return {
       theme,
-      multiTab,
-      breadcrumb,
       uniqueOpened,
     }
   },
@@ -70,7 +64,6 @@ export default {
 .admin {
   margin-right: 20px;
 }
-
 .github {
   height: 30px;
   width: 30px;

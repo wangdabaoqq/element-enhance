@@ -63,10 +63,10 @@ const route = useRoute()
   text-align: center;
 }
 .ele-tabs.el-tabs--card > .el-tabs__header .el-tabs__nav-next {
-  width: 34px;
-  height: 34px;
-  margin-top: 6px;
-  line-height: 34px;
+  width: 32px;
+  height: 32px;
+  margin-top: 4px;
+  line-height: 32px;
   text-align: center;
 }
 .ele-tabs.el-tabs--card > .el-tabs__header .el-tabs__nav-wrap.is-scrollable {
