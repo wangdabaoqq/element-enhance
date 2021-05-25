@@ -130,15 +130,16 @@ export default {
 
 ##### 插槽
 
-| name         | 说明                                                         |
-| :----------- | :----------------------------------------------------------- |
-| logo         | 自定义 Logo，参数为 { collapse } collapse-当前菜单栏是否折叠 |
-| menu         | 控制菜单显示内容，参数为 { meta, path, redirect } 等         |
-| footer       | 页脚内容                                                     |
-| header-left  | 头部左侧内容                                                 |
-| header-right | 头部右侧内容                                                 |
-| main-top     | 主体顶部内容                                                 |
-| main-bottom  | 主体底部内容                                                 |
+| name          | 说明                                                         |
+| :------------ | :----------------------------------------------------------- |
+| logo          | 自定义 Logo，参数为 { collapse } collapse-当前菜单栏是否折叠 |
+| menu          | 控制菜单显示内容，参数为 { meta, path, redirect } 等         |
+| footer        | 页脚内容                                                     |
+| header-left   | 头部左侧内容                                                 |
+| header-right  | 头部右侧内容                                                 |
+| header-bottom | 头部下方内容                                                 |
+| main-top      | 主体顶部内容                                                 |
+| main-bottom   | 主体底部内容                                                 |
 
 ##### 参考
 
