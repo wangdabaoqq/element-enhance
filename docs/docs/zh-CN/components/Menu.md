@@ -46,6 +46,22 @@
 
 :::
 
+##### 仅仅
+
+::: demo 通过传入 `unique-opened` 实现手风琴模式
+
+<template>
+  <ele-menu class="demo-menu" unique-opened=true />
+</template>
+
+<style>
+.demo-menu {
+  width: 240px;
+}
+</style>
+
+:::
+
 ##### 路由
 
 ::: demo 通过传入 `routes` 实现自定义路由显示

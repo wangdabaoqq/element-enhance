@@ -87,6 +87,12 @@ ul {
   line-height: 1.7;
 }
 
+p {
+  color: #454d64 !important;
+  margin-top: 16px !important;
+  font-size: 15px !important;
+}
+
 a,
 area,
 button,

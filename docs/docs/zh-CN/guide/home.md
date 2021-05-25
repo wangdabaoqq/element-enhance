@@ -1,6 +1,10 @@
-##### 介绍
+<img src="../../../src/assets/logo.svg" style="width:400px;margin:50px" />
 
-Element-Enhance 是一个基于 [element-plus](https://element-plus.org/), [vue](https://v3.vuejs.org/) 的后台组件库
+##### 理念
+
+Element Plus 定义了基础的设计规范，对应也提供了大量的基础组件。但是对于中后台类应用，我们希望提供更高程度的抽象，提供更上层的设计规范，并且对应提供相应的组件使得开发者可以快速搭建出高质量的页面。
+
+在 Element Enhance 中我们内置了一系列的设计规范，预设了常用的逻辑。在这个基础上我们同样提供了灵活的支持，比如对于 EleTable 来说你也可以把它完全当做 Element Plus 的 Table 来用，对于 EleForm 来说你也可以直接使用 Element Plus 的基础组件或者你的自定义组件。我们希望通过 Enhance 系列组件提供快速高效大家高质量中后台应用的能力，进一步扩展 Element Plus 的能力，欢迎使用并提出宝贵的意见。
 
 ##### 起因
 
@@ -21,5 +25,3 @@ Element-Enhance 是一个基于 [element-plus](https://element-plus.org/), [vue]
 ##### 贡献
 
 组件库还处于早期开发阶段，功能还需要完善。如果你希望参与贡献，欢迎 [Pull Request](https://github.com/Jmysy/element-enhance/pulls)。如果只是简单的文档相关的错误修正，你可以直接 PR，但如果是当前组件的 BUG 或者新功能、新组件等，最好优先提 [issues](https://github.com/Jmysy/element-enhance/issues)
-
-git 提交信息风格参考 [vue commit-convention](https://github.com/vuejs/vue-next/blob/master/.github/commit-convention.md)

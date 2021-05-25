@@ -65,11 +65,13 @@ import { ref } from 'vue'
 export default {
   setup() {
     const form1 = ref({})
+    
     const list = ref([
       { value: '0', label: '学习' },
       { value: '1', label: '运动' },
       { value: '2', label: '唱歌' },
     ])
+
     const columns1 = ref([
       {
         label: '输入',
