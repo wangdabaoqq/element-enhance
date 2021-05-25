@@ -1,10 +1,10 @@
-##### 🔨 安装
+##### 🕑 安装
 
 ```
 npm install element-enhance --save
 ```
 
-##### 🔧 引入
+##### ☁️ 引入
 
 ```js
 import { createApp } from 'vue'
