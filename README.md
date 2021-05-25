@@ -2,7 +2,7 @@
 
 > A component library for vue-next base on element-plus
 
-[在线文档](https://jmysy.github.io/element-enhance/) | [更新日志](./CHANGELOG.md)
+[在线文档](https://jmysy.github.io/element-enhance/) | [更新日志](./CHANGELOG.md) | [Simple Admin](https://jmysy.github.io/element-enhance-admin/)
 
 ### 安装
 
@@ -25,8 +25,16 @@ createApp(App).use(ElementEnhance).mount('#app')
 
 ```vue
 <template>
-  <ele-layout theme="black" multi-tab="true" breadcrumb="true">
+  <ele-layout theme="black">
     <template #logo></template>
+    <!-- 面包屑 -->
+    <template #header-left>
+      <ele-breadcrumb></ele-breadcrumb>
+    </template>
+    <!-- 选项卡 -->
+    <template #header-bottom>
+      <ele-tabs></ele-tabs>
+    </template>
   </ele-layout>
 </template>
 ```
