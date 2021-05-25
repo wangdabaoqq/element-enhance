@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 import { defineComponent, defineProps, toRefs } from 'vue'
-import { ElScrollbar } from 'element-plus'
+import { ElScrollbar, ElBacktop } from 'element-plus'
 
 const props = defineProps<{ transition?: string }>()
 const { transition } = toRefs(props)

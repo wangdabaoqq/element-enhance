@@ -22,7 +22,7 @@
         class="admin"
         target="_black"
         href="https://github.com/Jmysy/element-enhance-admin"
-      >Admin</a>
+      >Simple Admin</a>
       <a
         target="_black"
         href="https://github.com/Jmysy/element-enhance"
