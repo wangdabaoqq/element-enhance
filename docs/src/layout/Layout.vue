@@ -1,6 +1,8 @@
 <template>
   <ele-layout
     :theme="theme"
+    :multi-tab="multiTab"
+    :breadcrumb="breadcrumb"
     :unique-opened="uniqueOpened"
   >
     <template #logo="{ collapse }">
@@ -34,14 +36,18 @@
   </ele-layout>
 </template>
 <script>
-import { ref } from '@vue/runtime-core'
+import { computed, onMounted, ref, provide } from 'vue'
 export default {
   setup() {
     const theme = ref('black')
+    const multiTab = ref(true)
+    const breadcrumb = ref(true)
     const uniqueOpened = ref(true)
 
     return {
       theme,
+      multiTab,
+      breadcrumb,
       uniqueOpened,
     }
   },

@@ -29,6 +29,7 @@
     <section class="ele-container">
       <ele-layout-header
         :collapse="show"
+        :breadcrumb="breadcrumb"
         @toggle-collapse="toggleShow"
       >
         <template #left>
@@ -40,8 +41,7 @@
           <slot name="header-right" />
         </template>
       </ele-layout-header>
-      <slot name="bottom-header" />
-      <slot name="header-bottom" />
+      <ele-layout-tab v-if="multiTab" />
       <ele-layout-main :transition="transition">
         <template #top>
           <slot name="main-top" />
@@ -62,6 +62,7 @@ import { defineProps, toRefs, useContext } from 'vue'
 import EleLayoutAside from './LayoutAside.vue'
 import EleLayoutHeader from './LayoutHeader.vue'
 import EleLayoutMain from './LayoutMain.vue'
+import EleLayoutTab from './LayoutTab.vue'
 import { useAttrs, useShow } from '../composables/index'
 
 const props = defineProps<{
@@ -69,9 +70,18 @@ const props = defineProps<{
   transition?: string
   theme?: string
   uniqueOpened?: boolean
+  multiTab?: boolean
+  breadcrumb?: boolean
 }>()
 
-const { collapse, transition, uniqueOpened, theme } = toRefs(props)
+const {
+  collapse,
+  transition,
+  uniqueOpened,
+  theme,
+  multiTab,
+  breadcrumb,
+} = toRefs(props)
 const attrs = useAttrs()
 const { slots } = useContext()
 const { show, toggleShow } = useShow(collapse?.value)

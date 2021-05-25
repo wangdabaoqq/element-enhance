@@ -25,16 +25,8 @@ createApp(App).use(ElementEnhance).mount('#app')
 
 ```vue
 <template>
-  <ele-layout theme="black">
+  <ele-layout theme="black" multi-tab="true" breadcrumb="true">
     <template #logo></template>
-    <!-- 面包屑 -->
-    <template #header-left>
-      <ele-breadcrumb></ele-breadcrumb>
-    </template>
-    <!-- 选项卡 -->
-    <template #header-bottom>
-      <ele-tabs></ele-tabs>
-    </template>
   </ele-layout>
 </template>
 ```

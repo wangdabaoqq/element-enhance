@@ -12,22 +12,21 @@
       :key="item.path"
       :name="item.path"
       :label="item.title"
-    >
-      <template #label>
-        {{ item.title }}
-      </template>
-    </el-tab-pane>
+    />
   </el-tabs>
 </template>
 
-<script setup lang="ts">
+<script setup name="ProTabs" lang="ts">
+import { useContext } from 'vue'
 import { ElTabs, ElTabPane } from 'element-plus'
 import { useTabs } from '../composables'
-import { useRoute } from 'vue-router'
-import { computed } from '@vue/runtime-core'
-const { active, list, to, close } = useTabs()
-
-const route = useRoute()
+const { expose } = useContext()
+const { active, list, to, close, closeOther } = useTabs()
+expose({
+  list,
+  close,
+  closeOther,
+})
 </script>
 
 <style lang="postcss">
