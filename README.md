@@ -6,15 +6,15 @@ A component library for vue-next base on element-plus
 
 [开发文档](https://jmysy.github.io/element-enhance/) | [更新日志](./CHANGELOG.md)
 
-<p align="center">
+<p>
     <a href="#">
         <img src="https://img.shields.io/badge/vue-3.0.0+-green.svg" alt="Vue Version">
     </a>
     <a href="#">
-        <img src="https://img.shields.io/badge/Vue-Router-4.0.0+-green.svg" alt="Vue Router Version">
+        <img src="https://img.shields.io/badge/Vue Router-4.0.0+-green.svg" alt="Vue Router Version">
     </a>
       <a href="#">
-        <img src="https://img.shields.io/badge/Element-Plus-1.0.0+-green.svg" alt="Element Plus Version">
+        <img src="https://img.shields.io/badge/Element Plus-1.0.0+-green.svg" alt="Element Plus Version">
     </a>
 </p>
 
