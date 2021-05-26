@@ -1,6 +1,6 @@
 ## Element-Enhance
 
-<img src="/docs/src/assets/logo.svg" width="92%" style="margin:50px;"/>
+<img src="/docs/src/assets/logo.svg" width="60%" style="margin:50px;"/>
 
 A component library for vue-next base on element-plus
 
