@@ -4,7 +4,7 @@
 
 A component library for vue-next base on element-plus
 
-[在线文档](https://jmysy.github.io/element-enhance/) | [更新日志](./CHANGELOG.md) | [应用示例](https://github.com/Jmysy/element-enhance-admin)
+[开发文档](https://jmysy.github.io/element-enhance/) | [更新日志](./CHANGELOG.md) | [DEMO](https://github.com/Jmysy/element-enhance-admin) 
 
 ##### 📖 概述
 
