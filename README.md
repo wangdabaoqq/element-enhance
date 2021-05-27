@@ -1,5 +1,19 @@
 <img src="/docs/src/assets/logo.svg" width="400px" style="margin:50px" />
 
+a component library for Vue 3 base on element-plus
+
+<p>
+  <a href="#">
+    <img src="https://img.shields.io/badge/Vue-3.0.0+-green.svg" alt="Vue Version">
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/Vue Router-4.0.0+-green.svg" alt="Vue Router Version">
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/Element Plus-1.0.0+-green.svg" alt="Element Plus Version">
+  </a>
+</p>
+
 ##### 📖 概述
 
 Element Enhance 是基于 Element Plus 而开发的模板组件，提供了更高级别的抽象支持，开箱即用，更加专注于页面。
