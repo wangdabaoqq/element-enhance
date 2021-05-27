@@ -1,10 +1,12 @@
-##### 🕑 安装
+<img src="../../../src/assets/develop.svg" style="width:300px;margin:50px" />
+
+##### 安装
 
 ```
 npm install element-enhance --save
 ```
 
-##### ☁️ 引入
+##### 引入
 
 ```js
 import { createApp } from 'vue'
@@ -18,7 +20,7 @@ app.use(ElementEnhance)
 app.mount('#app')
 ```
 
-##### 🔎 使用
+##### 使用
 
 ```vue
 <template>
@@ -28,7 +30,7 @@ app.mount('#app')
 </template>
 ```
 
-##### 🔉 Hello World
+##### Hello World
 
 ::: demo 组件默认将从 `vue-router` 中获取路由生成路由，[格式参考](https://github.com/Jmysy/element-enhance/blob/master/docs/src/router/zh-CN.ts)
 

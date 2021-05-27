@@ -18,6 +18,11 @@ const zhCN: IRouteRecordRaw[] = [
         component: () => import('../../docs/zh-CN/guide/index.md'),
         meta: { title: '安装' },
       },
+      {
+        path: '/zh-CN/guide/change',
+        component: () => import('../../docs/zh-CN/guide/change.md'),
+        meta: { title: '更新' },
+      },
     ],
   },
   {
