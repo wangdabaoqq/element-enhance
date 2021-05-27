@@ -1,4 +1,4 @@
-<img src="/docs/src/assets/logo.svg" style="width:400px;margin:50px" />
+<img src="/docs/src/assets/logo.svg" width="400px" style="margin:50px" />
 
 ##### 📖 概述
 

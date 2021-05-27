@@ -19,11 +19,6 @@
     </template>
     <template #header-right>
       <a
-        class="admin"
-        target="_black"
-        href="https://github.com/Jmysy/element-enhance-admin"
-      >Simple Admin</a>
-      <a
         target="_black"
         href="https://github.com/Jmysy/element-enhance"
       >

@@ -2,6 +2,42 @@
 
 <div class="block">
   <el-timeline>
+         <el-timeline-item timestamp="2018-4-12" placement="top">
+      <el-card>
+        <h4>0.1.1</h4>
+        <p>就眠仪式 提交于 2018/4/12 20:46</p>
+      </el-card>
+    </el-timeline-item>
+         <el-timeline-item timestamp="2018-4-12" placement="top">
+      <el-card>
+        <h4>0.1.0</h4>
+        <p>就眠仪式 提交于 2018/4/12 20:46</p>
+      </el-card>
+    </el-timeline-item>
+         <el-timeline-item timestamp="2018-4-12" placement="top">
+      <el-card>
+        <h4>0.0.9</h4>
+        <p>就眠仪式 提交于 2018/4/12 20:46</p>
+      </el-card>
+    </el-timeline-item>
+         <el-timeline-item timestamp="2018-4-12" placement="top">
+      <el-card>
+        <h4>0.0.8</h4>
+        <p>就眠仪式 提交于 2018/4/12 20:46</p>
+      </el-card>
+    </el-timeline-item>
+        <el-timeline-item timestamp="2018-4-12" placement="top">
+      <el-card>
+        <h4>0.0.7</h4>
+        <p>就眠仪式 提交于 2018/4/12 20:46</p>
+      </el-card>
+    </el-timeline-item>
+        <el-timeline-item timestamp="2018-4-12" placement="top">
+      <el-card>
+        <h4>0.0.6</h4>
+        <p>就眠仪式 提交于 2018/4/12 20:46</p>
+      </el-card>
+    </el-timeline-item>
       <el-timeline-item timestamp="2018-4-12" placement="top">
       <el-card>
         <h4>0.0.5</h4>
