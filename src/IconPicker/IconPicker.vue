@@ -1,9 +1,10 @@
 <template>
   <div class="ele-icon-picker">
-    <el-dropdown>
+    <el-dropdown :trigger="trigger">
       <el-input
         v-model="modelValue"
-        placeholder="请选择图标"
+        :size="size"
+        :placeholder="placeholder"
       >
         <template #prepend>
           <i :class="modelValue" />
@@ -32,6 +33,9 @@ import elementList from '../Resource/icon/element.js'
 import { defineProps, toRefs, useContext } from '@vue/runtime-core'
 const props = defineProps<{
   modelValue?: string
+  size?: string
+  trigger?: string
+  placeholder?: string
 }>()
 const context = useContext()
 
@@ -40,8 +44,6 @@ const select = function (value: string) {
 }
 </script>
 <style>
-.ele-icon-picker-content {
-}
 .ele-icon-picker-content-icon {
   margin: 5px;
   padding-left: 10px;
