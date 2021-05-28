@@ -42,6 +42,11 @@ const zhCN: IRouteRecordRaw[] = [
         meta: { title: '菜单' },
       },
       {
+        path: '/zh-CN/components/icon',
+        component: () => import('../../docs/zh-CN/components/IconPicker.md'),
+        meta: { title: '图标' },
+      },
+      {
         path: '/zh-CN/components/form',
         component: () => import('../../docs/zh-CN/components/Form.md'),
         meta: { title: '表单' },

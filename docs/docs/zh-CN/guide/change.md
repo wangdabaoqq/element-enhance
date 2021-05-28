@@ -1,6 +1,13 @@
 <div class="block">
   <el-timeline>
-           <el-timeline-item timestamp="2018-4-12" placement="top">
+    <el-timeline-item timestamp="2021-5-28" placement="top">
+      <el-card>
+        <h4>0.1.5</h4>
+        <p>[新增]图标选择器组件</p>
+        <p>[新增]图标选择器文档</p>
+      </el-card>
+    </el-timeline-item>
+    <el-timeline-item timestamp="2018-4-12" placement="top">
       <el-card>
         <h4>0.1.5</h4>
         <p>就眠仪式 提交于 2018/4/12 20:46</p>

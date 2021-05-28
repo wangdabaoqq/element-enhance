@@ -16,6 +16,7 @@ import EleCrud from './Crud/index'
 import EleForm from './Form/index'
 import EleInputTag from './InputTag/index'
 import EleLayout from './Layout/index'
+import EleIconPicker from './IconPicker/index'
 import EleMenu from './Menu/index'
 import EleRadio from './Radio/index'
 import EleRadioButton from './RadioButton/index'
@@ -25,6 +26,7 @@ import EleTable from './Table/index'
 const components: Record<string, IDefineComponent> = {
   EleAutocompleteTag,
   EleCheckbox,
+  EleIconPicker,
   EleCheckboxButton,
   EleColumnSetting,
   EleCrud,
@@ -54,6 +56,7 @@ const install = (app: App, options?: InstallOptions): void => {
 export {
   EleAutocompleteTag,
   EleCheckbox,
+  EleIconPicker,
   EleCheckboxButton,
   EleColumnSetting,
   EleCrud,
