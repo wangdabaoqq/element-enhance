@@ -76,6 +76,36 @@
 
 :::
 
+##### 动画
+
+::: demo 通过 `transition` 设置路由过度动画
+
+<template>
+  <ele-layout class="demo-layout" transition="fade"></ele-layout>
+</template>
+
+<style>
+.demo-layout {
+  border: 1px solid whitesmoke;
+  height: 460px;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-leave {
+  opacity: 1;
+}
+.fade-enter-active {
+  transition: opacity .5s;
+}
+.fade-leave-active {
+  opacity:0;
+  transition: opacity .5s;
+}
+</style>
+
+:::
+
 #### 路由
 
 ::: demo 通过传入 `routes` 实现自定义路由显示
@@ -117,7 +147,7 @@ export default {
 | 参数          | 说明                       | 类型    | 默认值                 |
 | :------------ | :------------------------- | :------ | :--------------------- |
 | routes        | 当前程序路由               | array   | 从 `vue-router` 中获取 |
-| transition    | 定义页面过度渐变动画       | string  | -                      |
+| transition    | 定义页面过度渐变动画       | string  | null                   |
 | collapse      | 默认是否收起菜单           | boolean | false                  |
 | unique-opened | 是否只保持一个子菜单的展开 | boolean | false                  |
 | theme         | 切换布局主题               | string  | white                  |

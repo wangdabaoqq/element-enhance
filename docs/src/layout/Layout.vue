@@ -35,7 +35,7 @@ import { computed, onMounted, ref, provide } from 'vue'
 export default {
   setup() {
     const theme = ref('black')
-    const multiTab = ref(true)
+    const multiTab = ref(false)
     const breadcrumb = ref(true)
     const uniqueOpened = ref(true)
 

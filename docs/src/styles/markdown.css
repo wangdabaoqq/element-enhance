@@ -169,6 +169,7 @@ table {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 table th,
 table td {
   font-size: 14px;
@@ -177,6 +178,7 @@ table td {
   border-top: 1px solid whitesmoke; /*内部边框样式*/
   padding: 0 10px; /*内边距*/
 }
+
 table tr:hover {
   background: #efefef;
 }
