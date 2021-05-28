@@ -146,27 +146,6 @@ li > ol {
   margin: 0;
 }
 
-table:not(table[class]) {
-  display: block;
-  border-collapse: collapse;
-  margin: 1rem 0;
-  overflow-x: auto;
-}
-
-table:not(table[class]) tr {
-  border-top: 1px solid #dfe2e5;
-}
-
-table:not(table[class]) tr:nth-child(2n) {
-  background-color: #f6f8fa;
-}
-
-table:not(table[class]) th,
-table:not(table[class]) td {
-  border: 1px solid #dfe2e5;
-  padding: 0.6em 1em;
-}
-
 blockquote {
   margin: 1rem 0;
   border-left: 0.2rem solid #dfe2e5;
@@ -181,4 +160,29 @@ blockquote > p {
 
 form {
   margin: 0;
+}
+
+table {
+  width: 100%; /*表格宽度*/
+  border-collapse: collapse; /*使用单一线条的边框*/
+  empty-cells: show; /*单元格无内容依旧绘制边框*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+table th,
+table td {
+  font-size: 14px;
+  color: #606266;
+  height: 50px; /*统一每一行的默认高度*/
+  border-top: 1px solid whitesmoke; /*内部边框样式*/
+  padding: 0 10px; /*内边距*/
+}
+table tr:hover {
+  background: #efefef;
+}
+table th {
+  white-space: nowrap; /*表头内容强制在一行显示*/
+}
+table td {
+  white-space: nowrap;
 }
