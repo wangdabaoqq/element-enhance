@@ -14,7 +14,7 @@ a component library for Vue 3 base on element-plus
   </a>
 </p>
 
-[开 发 文 档](https://jmysy.github.io/element-enhance/) | [更 新 日 志](https://jmysy.github.io/element-enhance/zh-CN/guide/change) | [常 见 问 题](https://github.com/Jmysy/element-enhance/issues)
+[开 发 文 档](https://jmysy.github.io/element-enhance/zh-CN/components/layout) | [更 新 日 志](https://jmysy.github.io/element-enhance/zh-CN/guide/change) | [常 见 问 题](https://github.com/Jmysy/element-enhance/issues)
 
 ##### 📖 概述
 
