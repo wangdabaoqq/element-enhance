@@ -1,4 +1,4 @@
-<img src="../../../src/assets/develop.svg" style="width:260px;margin:50px" />
+<img src="../../../src/assets/develop.svg" style="width:280px;margin:50px" />
 
 ##### 安装
 
