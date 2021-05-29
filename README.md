@@ -38,6 +38,8 @@ Element Plus 定义了基础的设计规范，对应也提供了大量的基础�
 
 ##### ☁️ 入门
 
+让 Element Plus 更简单, 更通用, 更流行
+
 <img src="/docs/src/assets/banner.png"/>
 
 安装
