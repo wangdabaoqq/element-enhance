@@ -11,18 +11,16 @@
         </template>
       </el-input>
       <template #dropdown>
-        <el-dropdown-menu>
-          <div class="ele-icon-picker-content">
-            <div
-              v-for="(item, index) in elementList"
-              :key="index"
-              class="ele-icon-picker-content-icon"
-              :class="modelValue == item ? 'active' : ''"
-              @click="select(item)"
-            >
-              <i :class="item" />
-            </div>
-          </div>
+        <el-dropdown-menu class="ele-icon-picker-content">
+          <el-dropdown-menu-item
+            v-for="(item, index) in data ? data : elementList"
+            :key="index"
+            class="ele-icon-picker-content-icon"
+            :class="modelValue == item ? 'active' : ''"
+            @click="select(item)"
+          >
+            <i :class="item" />
+          </el-dropdown-menu-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>
@@ -30,12 +28,13 @@
 </template>
 <script setup lang="ts">
 import elementList from '../Resource/icon/element.js'
-import { defineProps, toRefs, useContext } from '@vue/runtime-core'
+import { defineProps, ref, toRefs, useContext } from '@vue/runtime-core'
 const props = defineProps<{
   modelValue?: string
   size?: string
   trigger?: string
   placeholder?: string
+  data?: string[]
 }>()
 const context = useContext()
 
@@ -44,13 +43,17 @@ const select = function (value: string) {
 }
 </script>
 <style>
+.ele-icon-picker-content {
+  width: 250px !important;
+  height: 300px !important;
+}
 .ele-icon-picker-content-icon {
+  border-radius: 4px;
   margin: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
   display: block;
   font-size: 20px;
-  border-radius: 2px;
   display: inline-block;
   border: 1px solid whitesmoke;
   color: #606266;
