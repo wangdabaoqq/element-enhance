@@ -7,6 +7,8 @@ html {
 h5 {
   font-weight: 700;
   font-size: 16.8px;
+  margin-bottom: 20px !important;
+  margin-top: 10px !important;
 }
 
 h1,
@@ -166,8 +168,6 @@ table {
   width: 100%; /*表格宽度*/
   border-collapse: collapse; /*使用单一线条的边框*/
   empty-cells: show; /*单元格无内容依旧绘制边框*/
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 table th,
