@@ -6,6 +6,13 @@
         :size="size"
         :placeholder="placeholder"
       >
+        <template #suffix>
+          <i
+            v-if="modelValue"
+            class="el-input__icon el-icon-error"
+            @click="empty"
+          />
+        </template>
         <template #prepend>
           <i :class="modelValue" />
         </template>
@@ -39,19 +46,23 @@ const props = defineProps<{
 const context = useContext()
 
 const select = function (value: string) {
-  context.emit('select', value)
+  context.emit('update:modelValue', value)
+}
+
+const empty = function () {
+  context.emit('update:modelValue')
 }
 </script>
 <style>
 .ele-icon-picker-content {
-  width: 250px !important;
+  width: 270px !important;
   height: 300px !important;
 }
 .ele-icon-picker-content-icon {
   border-radius: 4px;
   margin: 5px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
   display: block;
   font-size: 20px;
   display: inline-block;

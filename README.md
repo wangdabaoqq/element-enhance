@@ -14,7 +14,7 @@ a component library for Vue 3 base on element-plus
   </a>
 </p>
 
-[开 发 文 档](https://jmysy.github.io/element-enhance/zh-CN/components/layout) | [更 新 日 志](https://jmysy.github.io/element-enhance/zh-CN/guide/change) | [常 见 问 题](https://github.com/Jmysy/element-enhance/issues) |
+[开 发 文 档](https://jmysy.github.io/element-enhance/zh-CN/components/layout) | [更 新 日 志](https://jmysy.github.io/element-enhance/zh-CN/guide/change) | [常 见 问 题](https://gitee.com/Jmysy/element-enhance/issues) |
 [发 布 需 求](https://gitee.com/Jmysy/element-enhance/issues/I3TIE4)
 
 ##### 📖 概述
@@ -72,6 +72,10 @@ app.mount('#app')
   </ele-layout>
 </template>
 ```
+
+效果
+
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0530/172502_95f955fc_4835367.png '屏幕截图.png')
 
 ##### 🍚 贡献
 

@@ -103,8 +103,8 @@ function handleScroll() {
   word-break: break-word;
 }
 .ele-code .meta .description p {
-  margin: 0;
-  line-height: 26px;
+  margin: 0 !important;
+  line-height: 26px !important;
 }
 .ele-code .meta .description code {
   display: inline-block;
