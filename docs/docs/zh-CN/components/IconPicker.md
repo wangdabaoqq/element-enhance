@@ -101,7 +101,7 @@ export default {
 
 | 参数        | 说明           | 类型   | 可选值                                                      | 默认值 |
 | :---------- | :------------- | :----- | :---------------------------------------------------------- | :----- |
-| v-model     | 绑定值         | array  | [图标集合](https://element-plus.org/#/zh-CN/component/icon) |
+| v-model     | 绑定值         | string | [图标集合](https://element-plus.org/#/zh-CN/component/icon) |
 | size        | 尺寸           | string | medium / small / mini                                       | small  |
 | trigger     | 触发方式       | string | click / hover                                               | hover  |
 | placeholder | 提示信息       | string | -                                                           | -      |

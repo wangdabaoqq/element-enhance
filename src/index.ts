@@ -12,6 +12,7 @@ import EleAutocompleteTag from './AutocompleteTag/index'
 import EleCheckbox from './Checkbox/index'
 import EleCheckboxButton from './CheckboxButton/index'
 import EleColumnSetting from './ColumnSetting/index'
+import EleTreeSelect from './TreeSelect/index'
 import EleCrud from './Crud/index'
 import EleForm from './Form/index'
 import EleInputTag from './InputTag/index'
@@ -38,6 +39,7 @@ const components: Record<string, IDefineComponent> = {
   EleRadioButton,
   EleSelect,
   EleTable,
+  EleTreeSelect,
 }
 
 const install = (app: App, options?: InstallOptions): void => {
@@ -68,6 +70,7 @@ export {
   EleRadioButton,
   EleSelect,
   EleTable,
+  EleTreeSelect,
   install,
 }
 
