@@ -1,5 +1,26 @@
 <div class="block">
   <el-timeline>
+    <el-timeline-item timestamp="2021-5-31" placement="top">
+      <el-card>
+        <h4>0.2.0</h4>
+        <p>[新增] 下拉树选择器组件</p>
+        <p>[新增] 下拉树选择器文档</p>
+      </el-card>
+    </el-timeline-item>
+    <el-timeline-item timestamp="2021-5-29" placement="top">
+      <el-card>
+        <h4>0.1.9</h4>
+        <p>[加强] 图标选择器组件</p>
+        <p>[加强] 图标选择器文档</p>
+      </el-card>
+    </el-timeline-item>
+    <el-timeline-item timestamp="2021-5-29" placement="top">
+      <el-card>
+        <h4>0.1.8</h4>
+        <p>[加强] 图标选择器组件</p>
+        <p>[加强] 图标选择器文档</p>
+      </el-card>
+    </el-timeline-item>
     <el-timeline-item timestamp="2021-5-29" placement="top">
       <el-card>
         <h4>0.1.7</h4>
