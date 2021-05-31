@@ -22,7 +22,7 @@
       </el-input>
       <template #dropdown>
         <el-dropdown-menu class="ele-icon-picker-content">
-          <el-dropdown-menu-item
+          <el-dropdown-item
             v-for="(item, index) in data ? data : elementList"
             :key="index"
             class="ele-icon-picker-content-icon"
@@ -30,13 +30,14 @@
             @click="select(item)"
           >
             <i :class="item" />
-          </el-dropdown-menu-item>
+          </el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>
   </div>
 </template>
 <script setup lang="ts">
+import { ElDropdownMenu, ElDropdownItem } from 'element-plus'
 import elementList from '../Resource/icon/element.js'
 import { defineProps, ref, toRefs, useContext } from '@vue/runtime-core'
 const props = defineProps<{
@@ -45,7 +46,7 @@ const props = defineProps<{
   trigger?: string
   placeholder?: string
   data?: string[]
-  prepend?: {
+  prepend: {
     type: boolean
     default: true
   }
@@ -66,19 +67,18 @@ const empty = function () {
   height: 300px !important;
 }
 .ele-icon-picker-content-icon {
-  border-radius: 4px;
-  margin: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  display: block;
-  font-size: 20px;
-  display: inline-block;
-  border: 1px solid whitesmoke;
-  color: #606266;
+  border-radius: 4px !important;
+  margin: 5px !important;
+  padding-left: 10px !important;
+  padding-right: 5px !important;
+  font-size: 20px !important;
+  display: inline-block !important;
+  border: 1px solid whitesmoke !important;
+  color: #606266 !important;
 }
 .ele-icon-picker-content-icon:hover,
 .ele-icon-picker-content-icon.active {
-  color: white;
-  background-color: #409eff;
+  color: white !important;
+  background-color: #409eff !important;
 }
 </style>

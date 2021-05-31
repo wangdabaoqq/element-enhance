@@ -22,6 +22,32 @@ export default {
 
 :::
 
+##### 预览
+
+::: demo 使用 `ele-icon-picker`，并传入 data 数据，自动生成选项
+
+<template>
+    <ele-icon-picker v-model="icon" :prepend="prepend"></ele-icon-picker>
+</template>
+
+<script>
+import { ref } from 'vue'
+
+export default {
+  setup() {
+    const icon = ref('el-icon-search')
+    const prepend = ref(true)
+
+    return {
+      icon,
+      prepend
+    }
+  }
+}
+</script>
+
+:::
+
 ##### 尺寸
 
 ::: demo 使用 `ele-icon-picker`，并传入 data 数据，自动生成选项
@@ -99,10 +125,11 @@ export default {
 
 ##### 配置
 
-| 参数        | 说明           | 类型   | 可选值                                                      | 默认值 |
-| :---------- | :------------- | :----- | :---------------------------------------------------------- | :----- |
-| v-model     | 绑定值         | string | [图标集合](https://element-plus.org/#/zh-CN/component/icon) |
-| size        | 尺寸           | string | medium / small / mini                                       | small  |
-| trigger     | 触发方式       | string | click / hover                                               | hover  |
-| placeholder | 提示信息       | string | -                                                           | -      |
-| data        | 自定义图标集合 | array  | -                                                           | -      |
+| 参数        | 说明             | 类型    | 可选值                                                      | 默认值 |
+| :---------- | :--------------- | :------ | :---------------------------------------------------------- | :----- |
+| v-model     | 绑定值           | string  | [图标集合](https://element-plus.org/#/zh-CN/component/icon) |
+| size        | 尺寸             | string  | medium / small / mini                                       | small  |
+| trigger     | 触发方式         | string  | click / hover                                               | hover  |
+| placeholder | 提示信息         | string  | -                                                           | -      |
+| data        | 自定义图标集合   | array   | -                                                           | -      |
+| prepend     | 是否显示前置预览 | boolean | -                                                           | false  |
