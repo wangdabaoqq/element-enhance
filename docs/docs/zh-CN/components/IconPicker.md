@@ -3,7 +3,7 @@
 ::: demo 使用 `ele-icon-picker`，并传入 data 数据，自动生成选项
 
 <template>
-    <ele-icon-picker v-model="icon"></ele-icon-picker>
+    <ele-icon-picker v-model="icon" trigger="click"></ele-icon-picker>
 </template>
 
 <script>

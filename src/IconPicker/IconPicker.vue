@@ -23,7 +23,7 @@
       <template #dropdown>
         <el-dropdown-menu class="ele-icon-picker-content">
           <el-dropdown-menu-item
-            v-for="(item, index) in data ? data : elementList"
+            v-for="(item, index) in data ? data : datas"
             :key="index"
             class="ele-icon-picker-content-icon"
             :class="modelValue == item ? 'active' : ''"
@@ -31,6 +31,28 @@
           >
             <i :class="item" />
           </el-dropdown-menu-item>
+          <div
+            v-if="elementList.length > 0"
+            class="icon__footer"
+          >
+            <span class="icon__count">共 {{ elementList.length }} 条</span>
+            <el-button
+              size="mini"
+              class="btn-prev"
+              :disabled="isPrev"
+              @click="prev"
+            >
+              <i class="el-icon el-icon-arrow-left" />
+            </el-button>
+            <el-button
+              size="mini"
+              class="btn-next"
+              :disabled="isNext"
+              @click="next"
+            >
+              <i class="el-icon el-icon-arrow-right" />
+            </el-button>
+          </div>
         </el-dropdown-menu>
       </template>
     </el-dropdown>
@@ -45,13 +67,41 @@ const props = defineProps<{
   trigger?: string
   placeholder?: string
   data?: string[]
-  prependView?: {
-    type: boolean
-    default: false
-  }
+  prependView: true
 }>()
-const context = useContext()
+let pageNumber = 1
+let isPrev = ref(true)
+let isNext = ref(false)
 
+const datas = ref([] as any)
+const initPage = (index = 0, pageSize = 25) => {
+  datas.value = elementList.slice(index, pageSize)
+}
+// 初始化
+initPage()
+// 上一页
+const prev = () => {
+  pageNumber -= 1
+  isNext.value = false
+  let start = pageNumber * 25
+  initPage(start, 25 * (1 + pageNumber))
+  if (pageNumber === 0) {
+    isPrev.value = true
+    return false
+  }
+}
+// 下一页
+const next = () => {
+  pageNumber += 1
+  isPrev.value = false
+  let start = pageNumber * 25
+  initPage(start, 25 * (1 + pageNumber))
+  if (pageNumber === Math.ceil(elementList.length / 25) - 1) {
+    isNext.value = true
+    return false
+  }
+}
+const context = useContext()
 const select = function (value: string) {
   context.emit('update:modelValue', value)
 }
@@ -63,7 +113,7 @@ const empty = function () {
 <style>
 .ele-icon-picker-content {
   width: 270px !important;
-  height: 300px !important;
+  /* height: 300px !important; */
 }
 .ele-icon-picker-content-icon {
   border-radius: 4px;
@@ -80,5 +130,20 @@ const empty = function () {
 .ele-icon-picker-content-icon.active {
   color: white;
   background-color: #409eff;
+}
+.icon__footer {
+  margin: 10px 0;
+  text-align: center;
+  color: #515a6e;
+}
+.icon__count {
+  margin-right: 10px;
+}
+.btn-prev,
+.btn-next {
+  width: 30px;
+  padding: 0 !important;
+  border: 0 !important;
+  background: #f4f4f5 !important;
 }
 </style>
