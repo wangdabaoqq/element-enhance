@@ -13,7 +13,10 @@
             @click="empty"
           />
         </template>
-        <template #prepend>
+        <template
+          v-if="prependView"
+          #prepend
+        >
           <i :class="modelValue" />
         </template>
       </el-input>
@@ -42,6 +45,10 @@ const props = defineProps<{
   trigger?: string
   placeholder?: string
   data?: string[]
+  prependView?: {
+    type: boolean
+    default: false
+  }
 }>()
 const context = useContext()
 

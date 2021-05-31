@@ -12,7 +12,7 @@ import { ref } from 'vue'
 export default {
   setup() {
     const icon = ref('el-icon-search')
-
+    
     return {
       icon
     }
@@ -99,10 +99,11 @@ export default {
 
 ##### 配置
 
-| 参数        | 说明           | 类型   | 可选值                                                      | 默认值 |
-| :---------- | :------------- | :----- | :---------------------------------------------------------- | :----- |
-| v-model     | 绑定值         | array  | [图标集合](https://element-plus.org/#/zh-CN/component/icon) |
-| size        | 尺寸           | string | medium / small / mini                                       | small  |
-| trigger     | 触发方式       | string | click / hover                                               | hover  |
-| placeholder | 提示信息       | string | -                                                           | -      |
-| data        | 自定义图标集合 | array  | -                                                           | -      |
+| 参数        | 说明             | 类型    | 可选值                                                      | 默认值 |
+| :---------- | :--------------- | :------ | :---------------------------------------------------------- | :----- |
+| v-model     | 绑定值           | array   | [图标集合](https://element-plus.org/#/zh-CN/component/icon) |
+| prependView | 是否显示前置元素 | boolean | true / false                                                | false  |
+| size        | 尺寸             | string  | medium / small / mini                                       | small  |
+| trigger     | 触发方式         | string  | click / hover                                               | hover  |
+| placeholder | 提示信息         | string  | -                                                           | -      |
+| data        | 自定义图标集合   | array   | -                                                           | -      |
